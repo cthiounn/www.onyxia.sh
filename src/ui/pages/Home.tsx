@@ -7,37 +7,63 @@ import { Text } from "ui/theme";
 import { useTranslation } from "ui/i18n/useTranslations";
 import { makeStyles } from "../theme";
 import { breakpointsValues } from "onyxia-ui";
+import { GlArticle } from "gitlanding/GlArticle";
+import { GlIllustration } from "gitlanding/GlIllustration";
+import toilLightPngUrl from "ui/assets/img/ToilLight.png";
 
 Home.routeGroup = createGroup([routes.home]);
 
 export function Home() {
     const { t } = useTranslation({ Home });
-    const { classes } = useStyles();
+    const { classes, theme } = useStyles();
 
     return (
-        <GlHero
-            title={
-                <>
-                    <GlHeroText>Onyxia Datalab</GlHeroText>
-                    <Text typo="display heading" className={classes.title2}>Kubernetes Launcher</Text>
-                </>
-            }
-            subTitle={t("subTitle")}
-            imageSrc={dragonHoldingComputerSvgUrl}
-            hasLinkToSectionBellow={true}
-            hasImageShadow={false}
-            classes={{
-                "subtitle": classes.subtitle,
-                "imageWrapper": classes.imageWrapper,
-                "textWrapper": classes.textWrapper,
-            }}
-        />
+        <>
+            <GlHero
+                title={
+                    <>
+                        <GlHeroText>Onyxia Datalab</GlHeroText>
+                        <Text typo="display heading" className={classes.title2}>Kubernetes Launcher</Text>
+                    </>
+                }
+                subTitle={t("subTitle")}
+                imageSrc={dragonHoldingComputerSvgUrl}
+                hasLinkToSectionBellow={true}
+                hasImageShadow={false}
+                classes={{
+                    "subtitle": classes.subtitle,
+                    "imageWrapper": classes.imageWrapper,
+                    "textWrapper": classes.textWrapper,
+                }}
+            />
+            <GlArticle
+                id="firstSection"
+                title={t("the onyxia experience")}
+                body={t("the onyxia experience body")}
+                buttonLabel={t("install on your K8s cluster")}
+                buttonLink={{ "href": "https://install.onyxia.sh" }}
+                illustration={
+                    <GlIllustration
+                        hasShadow={false}
+                        type="image"
+                        url={theme.isDarkModeEnabled ? toilLightPngUrl : toilLightPngUrl}
+                    />
+                }
+                hasAnimation={true}
+                illustrationPosition="right"
+            />
+        </>
+
     );
 }
 
 export declare namespace Home {
     export type I18n = {
         subTitle: undefined;
+        "the onyxia experience": undefined;
+        "the onyxia experience body": undefined;
+        "install on your K8s cluster": undefined;
+
     };
 }
 
