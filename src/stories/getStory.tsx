@@ -15,9 +15,8 @@ import { id } from "tsafe/id";
 import "onyxia-ui/assets/fonts/WorkSans/font.css";
 import { GlobalStyles } from "tss-react/compat";
 import { objectKeys } from "tsafe/objectKeys";
-import { CoreProvider } from "ui/coreApi/CoreProvider";
 import { I18nProvider } from "ui/i18n/I18nProvider";
-import { RouteProvider } from "ui/routes";
+import { RouteProvider } from "ui/router";
 import { useLng, fallbackLanguage, languages } from "ui/i18n/useLng";
 import type { Language } from "ui/i18n/useLng";
 
@@ -27,7 +26,6 @@ const propsByTitle = new Map<string, any>();
 export function getStoryFactory<Props>(params: {
     sectionName: string;
     wrappedComponent: Record<string, (props: Props) => ReturnType<React.FC>>;
-    doUseLib?: boolean;
     /** https://storybook.js.org/docs/react/essentials/controls */
     argTypes?: Partial<Record<keyof Props, ArgType>>;
     defaultContainerWidth?: number;
@@ -36,7 +34,6 @@ export function getStoryFactory<Props>(params: {
         sectionName,
         wrappedComponent,
         argTypes = {},
-        doUseLib,
         defaultContainerWidth,
     } = params;
 
@@ -73,10 +70,6 @@ export function getStoryFactory<Props>(params: {
             </Text>
         );
     }
-
-    const StoreProviderOrFragment: React.ComponentType = !doUseLib
-        ? ({ children }) => <>{children}</>
-        : ({ children }) => <CoreProvider>{children}</CoreProvider>;
 
     const title = `${sectionName}/${symToStr(wrappedComponent)}`;
 
@@ -152,13 +145,11 @@ export function getStoryFactory<Props>(params: {
                             "display": "inline-block",
                         }}
                     >
-                        <StoreProviderOrFragment>
-                            <I18nProvider>
-                                <RouteProvider>
-                                    <Component {...(props as any)} />
-                                </RouteProvider>
-                            </I18nProvider>
-                        </StoreProviderOrFragment>
+                        <I18nProvider>
+                            <RouteProvider>
+                                <Component {...(props as any)} />
+                            </RouteProvider>
+                        </I18nProvider>
                     </div>
                 </ThemeProvider>
             </>
