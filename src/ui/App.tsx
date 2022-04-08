@@ -152,6 +152,7 @@ const useStyles = makeStyles({ "name": { App } })(theme => ({
     "logo": {
         "fill": theme.colors.useCases.typography.textFocus,
         "width": 33,
+        "height": "100%"
     },
     "headerMainTextContainer": {
         "cursor": "pointer",
