@@ -38,9 +38,9 @@ export function Home() {
             />
             <GlArticle
                 id="firstSection"
-                title={t("the onyxia experience")}
-                body={t("the onyxia experience body")}
-                buttonLabel={t("install on your K8s cluster")}
+                title={t("what is onyxia title")}
+                body={t("what is onyxia body")}
+                buttonLabel={t("install now")}
                 buttonLink={{ "href": "https://install.onyxia.sh" }}
                 illustration={
                     <GlIllustration
@@ -60,9 +60,9 @@ export function Home() {
 export declare namespace Home {
     export type I18n = {
         subTitle: undefined;
-        "the onyxia experience": undefined;
-        "the onyxia experience body": undefined;
-        "install on your K8s cluster": undefined;
+        "what is onyxia title": undefined;
+        "what is onyxia body": undefined;
+        "install now": undefined;
 
     };
 }
