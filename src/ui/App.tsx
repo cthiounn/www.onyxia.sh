@@ -1,4 +1,4 @@
-import { useEffect, useMemo, memo } from "react";
+import { useEffect, useMemo, useState, memo } from "react";
 import { useRoute } from "./router";
 import { FourOhFour } from "./pages/FourOhFour";
 import { GlTemplate } from "gitlanding/GlTemplate";
@@ -12,11 +12,16 @@ import { useConstCallback } from "powerhooks/useConstCallback";
 import { routes } from "ui/router";
 import { LanguageSelect } from "ui/theme";
 import { useLng } from "ui/i18n/useLng";
-//import { Dialog } from "onyxia-ui/Dialog";
+import { Dialog } from "onyxia-ui/Dialog";
+import { Button } from "ui/theme";
+import type { NonPostableEvt } from "evt";
+import { useEvt } from "evt/hooks/useEvt";
+import { useConst } from "powerhooks/useConst";
+import { Evt } from "evt";
 
 // https://docs.gitlanding.dev/creating-a-page
 
-const githubRepoUrl= "https://github.com/InseeFrLab/onyxia-web";
+const githubRepoUrl = "https://github.com/InseeFrLab/onyxia-web";
 
 /* spell-checker: disable */
 export const App = memo(() => {
@@ -50,73 +55,76 @@ export const App = memo(() => {
 
     const onLogoClick = useConstCallback(() => routes.home().push());
 
+    const evtOpenPricingDialog = useConst(() => Evt.create());
+
     return (
-        <GlTemplate
-            header={
-                <GlHeader
-                    title={
-                        <div className={classes.header} onClick={onLogoClick}>
-                            <OnyxiaLogoSvg className={classes.logo} />
-                            <div
-                                onClick={onLogoClick}
-                                className={classes.headerMainTextContainer}
-                            >
-                                <Text
-                                    typo="section heading"
-                                    className={classes.headerOnyxiaText}
+        <>
+            <GlTemplate
+                header={
+                    <GlHeader
+                        title={
+                            <div className={classes.header} onClick={onLogoClick}>
+                                <OnyxiaLogoSvg className={classes.logo} />
+                                <div
+                                    onClick={onLogoClick}
+                                    className={classes.headerMainTextContainer}
                                 >
-                                    Onyxia
-                                </Text>
-                                <Text
-                                    typo="section heading"
-                                    className={classes.headerDatalabText}
-                                >
-                                    Datalab
-                                </Text>
+                                    <Text
+                                        typo="section heading"
+                                        className={classes.headerOnyxiaText}
+                                    >
+                                        Onyxia
+                                    </Text>
+                                    <Text
+                                        typo="section heading"
+                                        className={classes.headerDatalabText}
+                                    >
+                                        Datalab
+                                    </Text>
+                                </div>
                             </div>
-                        </div>
-                    }
-                    links={[
-                        {
-                            "label": "GitHub",
-                            "href": githubRepoUrl
-                        },
-                        {
-                            "label": t("install"),
-                            "href": "https://github.com/InseeFrLab/onyxia/tree/master/step-by-step",
-                        },
-                        {
-                            "label": t("pricing"),
-                            "onClick": () => {
-                                alert(t("paid for by French taxpayers"));
+                        }
+                        links={[
+                            {
+                                "label": "GitHub",
+                                "href": githubRepoUrl
                             },
-                            "href": "#",
-                        },
-                        {
-                            "label": t("try it"),
-                            "href": "https://datalab.sspcloud.fr/catalog",
-                        },
-                    ]}
-                    enableDarkModeSwitch={true}
-                    githubRepoUrl={githubRepoUrl}
-                    githubButtonSize="large"
-                    showGithubStarCount={true}
-                    customItemEnd={
-                        <LanguageSelect 
-                        language={lng}
-                        onLanguageChange={setLng}
-                        variant="big"
-                        />
-                    }
-                />
-            }
-            headerOptions={{
-                "position": "fixed",
-                "isRetracted": "smart",
-            }}
-        >
-            {pageNode}
-        </GlTemplate>
+                            {
+                                "label": t("install"),
+                                "href": "https://github.com/InseeFrLab/onyxia/tree/master/step-by-step",
+                            },
+                            {
+                                "label": t("pricing"),
+                                "onClick": () => evtOpenPricingDialog.post(),
+                                "href": "#",
+                            },
+                            {
+                                "label": t("try it"),
+                                "href": "https://datalab.sspcloud.fr/catalog",
+                            },
+                        ]}
+                        enableDarkModeSwitch={true}
+                        githubRepoUrl={githubRepoUrl}
+                        githubButtonSize="large"
+                        showGithubStarCount={true}
+                        customItemEnd={
+                            <LanguageSelect
+                                language={lng}
+                                onLanguageChange={setLng}
+                                variant="big"
+                            />
+                        }
+                    />
+                }
+                headerOptions={{
+                    "position": "fixed",
+                    "isRetracted": "smart",
+                }}
+            >
+                {pageNode}
+            </GlTemplate>
+            <PricingDialog evtOpen={evtOpenPricingDialog} />
+        </>
     );
 });
 
@@ -126,7 +134,8 @@ export declare namespace App {
         pricing: undefined;
         "paid for by French taxpayers": undefined;
         "try it": undefined;
-        
+        "it is libre software": undefined;
+        "ok": undefined;
     };
 }
 
@@ -158,11 +167,40 @@ const useStyles = makeStyles({ "name": { App } })(theme => ({
     },
 }));
 
-/*
-const { } = (() => {
+const { PricingDialog } = (() => {
 
+    type Props = {
+        evtOpen: NonPostableEvt<void>;
+    };
 
+    const PricingDialog = memo(
+        (props: Props) => {
 
+            const { evtOpen } = props;
+
+            const { t } = useTranslation({ App });
+
+            const [isOpen, setIsOpen] = useState(false);
+
+            const onClose = useConstCallback(() => setIsOpen(false));
+
+            useEvt(
+                ctx => evtOpen.attach(ctx, () => setIsOpen(true)),
+                [evtOpen]
+            );
+
+            return (
+                <Dialog
+                    isOpen={isOpen}
+                    title={t("it is libre software")}
+                    body={t("paid for by French taxpayers")}
+                    buttons={<Button onClick={onClose}>{t("ok")}</Button>}
+                    onClose={onClose}
+                />
+            );
+        }
+    );
+
+    return { PricingDialog }
 
 })();
-*/
