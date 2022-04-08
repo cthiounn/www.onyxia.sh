@@ -18,6 +18,7 @@ import type { NonPostableEvt } from "evt";
 import { useEvt } from "evt/hooks/useEvt";
 import { useConst } from "powerhooks/useConst";
 import { Evt } from "evt";
+import { breakpointsValues } from "onyxia-ui";
 
 // https://docs.gitlanding.dev/creating-a-page
 
@@ -109,6 +110,7 @@ export const App = memo(() => {
                         showGithubStarCount={true}
                         customItemEnd={
                             <LanguageSelect
+                                className={classes.languageSelect}
                                 language={lng}
                                 onLanguageChange={setLng}
                                 variant="big"
@@ -165,6 +167,18 @@ const useStyles = makeStyles({ "name": { App } })(theme => ({
         "fontWeight": 600,
         "color": theme.colors.useCases.typography.textFocus,
     },
+    "languageSelect": {
+        "marginLeft": theme.spacing(3),
+        "display": (()=>{
+
+            if( theme.windowInnerWidth >= breakpointsValues.lg ){
+                return undefined;
+            }
+
+            return "none";
+
+        })()
+    }
 }));
 
 const { PricingDialog } = (() => {
