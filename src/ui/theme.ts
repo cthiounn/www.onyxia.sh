@@ -1,7 +1,6 @@
 import {
     createThemeProvider,
-    defaultGetTypographyDesc,
-    createDefaultColorUseCases,
+    defaultGetTypographyDesc
 } from "onyxia-ui";
 import { createIcon } from "onyxia-ui/Icon";
 import { createIconButton } from "onyxia-ui/IconButton";
@@ -23,16 +22,7 @@ export const { ThemeProvider, useTheme } = createThemeProvider({
         ...defaultGetTypographyDesc(params),
         "fontFamily": '"Work Sans", sans-serif',
         //"fontFamily": 'Marianne, sans-serif',
-    }),
-    "createColorUseCases": params => ({
-        ...createDefaultColorUseCases(params),
-        "tags": {
-            "discover": "#CCDFF2",
-            "learn": "#C6F8D7",
-            "consolidate": "#F5C264",
-            "deepen": "#E99582",
-        },
-    }),
+    })
 });
 
 export const { makeStyles, useStyles } = createMakeStyles({ useTheme });
