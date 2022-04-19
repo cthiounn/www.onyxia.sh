@@ -119,7 +119,7 @@ export const App = memo(() => {
                     />
                 }
                 headerOptions={{
-                    "position": "fixed",
+                    "position": "sticky",
                     "isRetracted": "smart",
                 }}
             >

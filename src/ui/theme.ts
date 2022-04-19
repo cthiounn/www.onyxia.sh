@@ -7,7 +7,6 @@ import { createIconButton } from "onyxia-ui/IconButton";
 import { createButton } from "onyxia-ui/Button";
 import { createText } from "onyxia-ui/Text";
 import { createMakeStyles } from "tss-react/compat";
-import { ReactComponent as OnyxiaLogoSvg } from "./assets/svg/OnyxiaLogo.svg";
 import type { ThemeProviderProps } from "onyxia-ui";
 import { createPageHeader } from "onyxia-ui/PageHeader";
 import type { Param0 } from "tsafe/Param0";
@@ -16,6 +15,7 @@ import SentimentSatisfiedIcon from "@mui/icons-material/SentimentSatisfied";
 import { createButtonBarButton } from "onyxia-ui/ButtonBarButton";
 import { createLanguageSelect } from "onyxia-ui/LanguageSelect";
 import type { Language } from "./i18n/useLng";
+import { createOnyxiaSplashScreenLogo } from "onyxia-ui/lib/SplashScreen";
 
 export const { ThemeProvider, useTheme } = createThemeProvider({
     "getTypographyDesc": params => ({
@@ -39,8 +39,10 @@ export const { IconButton } = createIconButton({ Icon });
 export const { Button } = createButton({ Icon });
 export const { Text } = createText({ useTheme });
 
+const { OnyxiaSplashScreenLogo } = createOnyxiaSplashScreenLogo({ useTheme });
+
 export const splashScreen: ThemeProviderProps["splashScreen"] = {
-    "Logo": OnyxiaLogoSvg,
+    "Logo": OnyxiaSplashScreenLogo,
     "minimumDisplayDuration": 0,
 };
 

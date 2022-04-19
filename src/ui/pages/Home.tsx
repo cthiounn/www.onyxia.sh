@@ -27,9 +27,12 @@ export function Home() {
                     </>
                 }
                 subTitle={t("subTitle")}
-                imageSrc={dragonHoldingComputerSvgUrl}
+                illustration={{
+                    "type": "image",
+                    "imageSrc": dragonHoldingComputerSvgUrl
+                }}
                 hasLinkToSectionBellow={true}
-                hasImageShadow={false}
+                hasIllustrationShadow={false}
                 classes={{
                     "subtitle": classes.subtitle,
                     "imageWrapper": classes.imageWrapper,
