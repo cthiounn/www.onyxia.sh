@@ -1,2 +1,0 @@
-(this.webpackJsonponyxia_landingpage=this.webpackJsonponyxia_landingpage||[]).push([[106],{892:function(n,t,a){"use strict";function s(n){n.languages.properties={comment:/^[ \t]*[#!].*$/m,"attr-value":{pattern:/(^[ \t]*(?:\\(?:\r\n|[\s\S])|[^\\\s:=])+?(?: *[=:] *| ))(?:\\(?:\r\n|[\s\S])|[^\\\r\n])+/m,lookbehind:!0},"attr-name":/^[ \t]*(?:\\(?:\r\n|[\s\S])|[^\\\s:=])+?(?= *[=:] *| )/m,punctuation:/[=:]/}}n.exports=s,s.displayName="properties",s.aliases=[]}}]);
-//# sourceMappingURL=react-syntax-highlighter_languages_refractor_properties.16c914e7.chunk.js.map
