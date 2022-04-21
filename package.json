@@ -8,7 +8,7 @@
         "url": "git://github.com/InseeFrLab/onyxia.git"
     },
     "scripts": {
-        "build": "react-scripts build && hack-gh-pages src/ui/router.ts",
+        "build": "react-app-rewired build && hack-gh-pages src/ui/router.ts",
         "start": "react-app-rewired start",
         "link_inhouse_deps": "ts-node --skip-project src/bin/link_inhouse_deps.ts",
         "storybook": "start-storybook -p 6006 -s public",
