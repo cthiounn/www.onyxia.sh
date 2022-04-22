@@ -64,7 +64,7 @@ export const App = memo(() => {
                 header={
                     <GlHeader
                         title={
-                            <div className={classes.header} onClick={onLogoClick}>
+                            <div className={classes.headerTitleWrapper} onClick={onLogoClick}>
                                 <OnyxiaLogoSvg className={classes.logo} />
                                 <div
                                     onClick={onLogoClick}
@@ -142,9 +142,10 @@ export declare namespace App {
 }
 
 const useStyles = makeStyles({ "name": { App } })(theme => ({
-    "header": {
+    "headerTitleWrapper": {
         "display": "flex",
         "cursor": "pointer",
+        "alignItems": "center"
     },
     "logoContainer": {
         "cursor": "pointer",
