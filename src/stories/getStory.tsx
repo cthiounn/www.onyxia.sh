@@ -15,10 +15,10 @@ import { id } from "tsafe/id";
 import "onyxia-ui/assets/fonts/WorkSans/font.css";
 import { GlobalStyles } from "tss-react/compat";
 import { objectKeys } from "tsafe/objectKeys";
-import { I18nProvider } from "ui/i18n/I18nProvider";
 import { RouteProvider } from "ui/router";
-import { useLng, fallbackLanguage, languages } from "ui/i18n/useLng";
-import type { Language } from "ui/i18n/useLng";
+import { fallbackLanguage, languages } from "ui/i18n";
+import type { Language } from "ui/i18n";
+import { useLang } from "ui/i18n";
 
 //NOTE: Storybook bug hotfix.
 const propsByTitle = new Map<string, any>();
@@ -79,7 +79,7 @@ export function getStoryFactory<Props>(params: {
             containerWidth: number;
             chromeFontSize: ChromeFontSize;
             targetWindowInnerWidth: number;
-            lng: Language;
+            lang: Language;
         }
     > = templateProps => {
         //NOTE: We fix a bug of Storybook that override all props when we reload.
@@ -89,7 +89,7 @@ export function getStoryFactory<Props>(params: {
             containerWidth,
             targetWindowInnerWidth,
             chromeFontSize,
-            lng,
+            lang,
             ...props
         } = Object.assign(
             propsByTitle.get(title)!,
@@ -102,11 +102,11 @@ export function getStoryFactory<Props>(params: {
             setIsDarkModeEnabled(darkMode);
         }, [darkMode]);
 
-        const { setLng } = useLng();
+        const { setLang } = useLang();
 
         useEffect(() => {
-            setLng(lng);
-        }, [lng]);
+            setLang(lang);
+        }, [lang]);
 
         const getViewPortConfig = useCallback<
             NonNullable<ThemeProviderProps["getViewPortConfig"]>
@@ -145,11 +145,9 @@ export function getStoryFactory<Props>(params: {
                             "display": "inline-block",
                         }}
                     >
-                        <I18nProvider>
-                            <RouteProvider>
-                                <Component {...(props as any)} />
-                            </RouteProvider>
-                        </I18nProvider>
+                        <RouteProvider>
+                            <Component {...(props as any)} />
+                        </RouteProvider>
                     </div>
                 </ThemeProvider>
             </>
@@ -164,7 +162,7 @@ export function getStoryFactory<Props>(params: {
             "containerWidth": defaultContainerWidth ?? 0,
             "targetWindowInnerWidth": 0,
             "chromeFontSize": "Medium (Recommended)",
-            "lng": fallbackLanguage,
+            "lang": fallbackLanguage,
             ...props,
         };
 
@@ -198,7 +196,7 @@ export function getStoryFactory<Props>(params: {
                     "options": objectKeys(chromeFontSizesFactors),
                     "control": { "type": "select" },
                 },
-                "lng": {
+                "lang": {
                     "options": languages,
                     "control": {
                         "type": "inline-radio",

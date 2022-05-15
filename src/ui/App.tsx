@@ -5,13 +5,13 @@ import { GlTemplate } from "gitlanding/GlTemplate";
 import { useSplashScreen } from "onyxia-ui";
 import { Home } from "./pages/Home";
 import { GlHeader } from "gitlanding/GlHeader";
-import { useTranslation } from "ui/i18n/useTranslations";
+import { useTranslation } from "ui/i18n";
 import { makeStyles, Text } from "ui/theme";
 import { ReactComponent as OnyxiaLogoSvg } from "ui/assets/svg/OnyxiaLogo.svg";
 import { useConstCallback } from "powerhooks/useConstCallback";
 import { routes } from "ui/router";
 import { LanguageSelect } from "ui/theme";
-import { useLng } from "ui/i18n/useLng";
+import { useLang } from "ui/i18n";
 import { Dialog } from "onyxia-ui/Dialog";
 import { Button } from "ui/theme";
 import type { NonPostableEvt } from "evt";
@@ -19,6 +19,7 @@ import { useEvt } from "evt/hooks/useEvt";
 import { useConst } from "powerhooks/useConst";
 import { Evt } from "evt";
 import { breakpointsValues } from "onyxia-ui";
+import { declareComponentKeys } from "i18nifty";
 
 // https://docs.gitlanding.dev/creating-a-page
 
@@ -28,7 +29,7 @@ const githubRepoUrl = "https://github.com/InseeFrLab/onyxia-web";
 export const App = memo(() => {
     const route = useRoute();
 
-    const { lng, setLng } = useLng();
+    const { lang, setLang } = useLang();
 
     {
         const { hideRootSplashScreen } = useSplashScreen();
@@ -111,8 +112,8 @@ export const App = memo(() => {
                         customItemEnd={
                             <LanguageSelect
                                 className={classes.languageSelect}
-                                language={lng}
-                                onLanguageChange={setLng}
+                                language={lang}
+                                onLanguageChange={setLang}
                                 variant="big"
                             />
                         }
@@ -130,16 +131,14 @@ export const App = memo(() => {
     );
 });
 
-export declare namespace App {
-    export type I18n = {
-        install: undefined;
-        pricing: undefined;
-        "paid for by French taxpayers": undefined;
-        "try it": undefined;
-        "it is libre software": undefined;
-        "ok": undefined;
-    };
-}
+export const { i18n } = declareComponentKeys<
+        "install" |
+        "pricing" |
+        "paid for by French taxpayers" |
+        "try it" |
+        "it is libre software" |
+        "ok"
+>()({ App });
 
 const useStyles = makeStyles({ "name": { App } })(theme => ({
     "headerTitleWrapper": {

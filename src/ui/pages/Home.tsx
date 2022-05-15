@@ -4,12 +4,13 @@ import { GlHero } from "gitlanding/GlHero";
 import { GlHeroText } from "gitlanding/GlHero/GlHeroText";
 import dragonHoldingComputerSvgUrl from "ui/assets/svg/DragonHoldingComputer.svg";
 import { Text } from "ui/theme";
-import { useTranslation } from "ui/i18n/useTranslations";
+import { useTranslation } from "ui/i18n";
 import { makeStyles } from "../theme";
 import { breakpointsValues } from "onyxia-ui";
 import { GlArticle } from "gitlanding/GlArticle";
 import { GlIllustration } from "gitlanding/GlIllustration";
 import toilLightPngUrl from "ui/assets/img/ToilLight.png";
+import { declareComponentKeys } from "i18nifty";
 
 Home.routeGroup = createGroup([routes.home]);
 
@@ -60,15 +61,7 @@ export function Home() {
     );
 }
 
-export declare namespace Home {
-    export type I18n = {
-        subTitle: undefined;
-        "what is onyxia title": undefined;
-        "what is onyxia body": undefined;
-        "install now": undefined;
 
-    };
-}
 
 const useStyles = makeStyles({ "name": { Home } })(theme => ({
     "title2": {
@@ -108,3 +101,10 @@ const useStyles = makeStyles({ "name": { Home } })(theme => ({
         })()
     }
 }));
+
+export const { i18n } = declareComponentKeys<
+    "subTitle" |
+    "what is onyxia title" |
+    "what is onyxia body" |
+    "install now"
+>()({ Home });

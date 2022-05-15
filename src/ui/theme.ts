@@ -14,7 +14,7 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import SentimentSatisfiedIcon from "@mui/icons-material/SentimentSatisfied";
 import { createButtonBarButton } from "onyxia-ui/ButtonBarButton";
 import { createLanguageSelect } from "onyxia-ui/LanguageSelect";
-import type { Language } from "./i18n/useLng";
+import type { Language } from "ui/i18n";
 import { createOnyxiaSplashScreenLogo } from "onyxia-ui/lib/SplashScreen";
 
 export const { ThemeProvider, useTheme } = createThemeProvider({

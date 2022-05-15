@@ -1,16 +1,7 @@
 import { memo } from "react";
-import { useTranslation } from "../i18n/useTranslations";
+import { useTranslation } from "ui/i18n";
 import { makeStyles, Text } from "../theme";
-
-const useStyles = makeStyles()(theme => ({
-    "root": {
-        "height": "100%",
-        "display": "flex",
-        "alignItems": "center",
-        "justifyContent": "center",
-        "backgroundColor": theme.colors.useCases.surfaces.background,
-    },
-}));
+import { declareComponentKeys } from "i18nifty";
 
 export const FourOhFour = memo(() => {
     const { t } = useTranslation({ FourOhFour });
@@ -24,8 +15,16 @@ export const FourOhFour = memo(() => {
     );
 });
 
-export declare namespace FourOhFour {
-    export type I18n = {
-        "not found": undefined;
-    };
-}
+const useStyles = makeStyles({ "name": { FourOhFour } })(theme => ({
+    "root": {
+        "height": "100%",
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "backgroundColor": theme.colors.useCases.surfaces.background,
+    },
+}));
+
+export const { i18n } = declareComponentKeys<
+    "not found"
+>()({ FourOhFour });
