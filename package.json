@@ -70,18 +70,23 @@
         "react-app-rewired": "^2.1.8",
         "react-scripts": "4.0.2",
         "ts-node": "^10.1.0",
-        "typescript": "^4.5.4"
+        "typescript": "^4.5.4",
+        "eslint-plugin-tss-unused-classes": "^0.0.3"
     },
     "resolutions": {
         "babel-loader": "8.1.0"
     },
     "eslintConfig": {
+        "plugins": [
+            "tss-unused-classes"
+          ],
         "extends": [
             "react-app"
         ],
         "rules": {
             "@typescript-eslint/no-redeclare": "off",
-            "react-hooks/exhaustive-deps": "off"
+            "react-hooks/exhaustive-deps": "off",
+            "tss-unused-classes/unused-classes": "warn"
         }
     },
     "browserslist": {
