@@ -13,8 +13,7 @@ export const { useTranslation, resolveLocalizedString, useLang, useResolveLocali
 >()(
 	{
 		languages,
-		fallbackLanguage,
-		"doPersistLanguageInLocalStorage": true
+		fallbackLanguage
 	},
 	{
 		"en": {

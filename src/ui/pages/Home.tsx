@@ -1,14 +1,13 @@
 import { createGroup } from "type-route";
-import { routes } from "../router";
+import { routes } from "ui/router";
 import { GlHero } from "gitlanding/GlHero";
 import { GlHeroText } from "gitlanding/GlHero/GlHeroText";
 import dragonHoldingComputerSvgUrl from "ui/assets/svg/DragonHoldingComputer.svg";
 import { Text } from "ui/theme";
 import { useTranslation } from "ui/i18n";
-import { makeStyles } from "../theme";
+import { makeStyles } from "ui/theme";
 import { breakpointsValues } from "onyxia-ui";
 import { GlArticle } from "gitlanding/GlArticle";
-import { GlIllustration } from "gitlanding/GlIllustration";
 import toilLightPngUrl from "ui/assets/img/ToilLight.png";
 import { declareComponentKeys } from "i18nifty";
 
@@ -30,10 +29,10 @@ export function Home() {
                 subTitle={t("subTitle")}
                 illustration={{
                     "type": "image",
-                    "imageSrc": dragonHoldingComputerSvgUrl
+                    "src": dragonHoldingComputerSvgUrl,
+                    "hasShadow": false
                 }}
                 hasLinkToSectionBellow={true}
-                hasIllustrationShadow={false}
                 classes={{
                     "subtitle": classes.subtitle,
                     "imageWrapper": classes.imageWrapper,
@@ -46,13 +45,11 @@ export function Home() {
                 body={t("what is onyxia body")}
                 buttonLabel={t("install now")}
                 buttonLink={{ "href": "https://install.onyxia.sh" }}
-                illustration={
-                    <GlIllustration
-                        hasShadow={false}
-                        type="image"
-                        url={theme.isDarkModeEnabled ? toilLightPngUrl : toilLightPngUrl}
-                    />
-                }
+                illustration={{
+                    "type": "image",
+                    "src": theme.isDarkModeEnabled ? toilLightPngUrl : toilLightPngUrl,
+                    "hasShadow": false
+                }}
                 hasAnimation={true}
                 illustrationPosition="right"
             />
@@ -79,7 +76,6 @@ const useStyles = makeStyles({ "name": { Home } })(theme => ({
                     "paddingRight": 30,
                     "paddingLeft": 30
                 };
-
             }
 
             return {};
@@ -93,7 +89,6 @@ const useStyles = makeStyles({ "name": { Home } })(theme => ({
                 return {
                     "marginLeft": 70
                 };
-
             }
 
             return {};
