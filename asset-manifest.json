@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.0b8fd58e.chunk.js",
-    "main.js.map": "/static/js/main.0b8fd58e.chunk.js.map",
+    "main.js": "/static/js/main.5ab41435.chunk.js",
+    "main.js.map": "/static/js/main.5ab41435.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7c23acc1.js",
     "runtime-main.js.map": "/static/js/runtime-main.7c23acc1.js.map",
-    "static/js/2.05473dc4.chunk.js": "/static/js/2.05473dc4.chunk.js",
-    "static/js/2.05473dc4.chunk.js.map": "/static/js/2.05473dc4.chunk.js.map",
+    "static/js/2.47a8feb3.chunk.js": "/static/js/2.47a8feb3.chunk.js",
+    "static/js/2.47a8feb3.chunk.js.map": "/static/js/2.47a8feb3.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.05473dc4.chunk.js.LICENSE.txt": "/static/js/2.05473dc4.chunk.js.LICENSE.txt",
+    "static/js/2.47a8feb3.chunk.js.LICENSE.txt": "/static/js/2.47a8feb3.chunk.js.LICENSE.txt",
     "static/media/DragonHoldingComputer.60d00bd8.svg": "/static/media/DragonHoldingComputer.60d00bd8.svg",
     "static/media/OnyxiaLogo.5b583358.svg": "/static/media/OnyxiaLogo.5b583358.svg",
     "static/media/ToilLight.76c4a407.png": "/static/media/ToilLight.76c4a407.png",
@@ -15,7 +15,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.7c23acc1.js",
-    "static/js/2.05473dc4.chunk.js",
-    "static/js/main.0b8fd58e.chunk.js"
+    "static/js/2.47a8feb3.chunk.js",
+    "static/js/main.5ab41435.chunk.js"
   ]
 }
