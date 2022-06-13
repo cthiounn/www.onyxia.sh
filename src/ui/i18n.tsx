@@ -48,7 +48,7 @@ export const {
                 "install now": "Install now",
                 "article UI title": "An interface for launching data services",
                 "article UI body": `Deploy services and tools on demand with advanced customization options (e.g: Jupyter, RStudio) on a Kubernetes cluster.
-The catalog of available images is not part of the app, you can create your own.`,
+A default catalog of services is available but you can chosse to create your own.`,
 
                 "article data title": "Features data storage",
                 "article data body": `Propose a S3-compatible file explorer for object storage. 
@@ -118,16 +118,16 @@ The catalog of available images is not part of the app, you can create your own.
             "Home": {
                 "orange title": "La plate-forme cloud orientée données",
                 "subTitle":
-                    "Mettez en commun votre puissance de calcul et fournissez un environnement de travail a l'état de l'art à vos datascientits sans dépendre de logiciels propiétaires des GAFAM.",
+                    "Mettez en commun votre puissance de calcul et fournissez un environnement de travail a l'état de l'art à vos data scientist sans dépendre de logiciels propiétaires.",
                 "what is onyxia title": "Qu'est-ce qu'Onyxia?",
                 "what is onyxia body": `Onyxia est une application web qui s'installe sur un cluster [Kubernetes](https://kubernetes.io/).  
-            Elle fournit à vos data scientistes une interface intuitive et agréable pour lancer des [containers](https://www.docker.com/) comme [Spark, RStudio ou Jupyter](https://datalab.sspcloud.fr/catalog/) à la demande
-            et propose une intégration S3 ([MINIO](https://min.io/) ou [AWS](https://aws.amazon.com/s3/)) pour travailler avec la donnée et [Vault](https://www.vaultproject.io/) pour la géstion sécuisé des information sensibles.
+            Elle fournit à vos data scientist une interface intuitive et agréable pour lancer des [containers](https://www.docker.com/) comme [Spark, RStudio ou Jupyter](https://datalab.sspcloud.fr/catalog/) à la demande
+            et propose une intégration S3 ([MINIO](https://min.io/) ou [AWS](https://aws.amazon.com/s3/)) pour travailler avec la donnée et [Vault](https://www.vaultproject.io/) pour la gestion sécurisée des informations sensibles.
             `,
                 "install now": "Installer maintenant",
                 "article UI title": "Une interface pour lancer des services data",
                 "article UI body": `Deployez des services et des outils à la demande avec des options de personnalisation avancées (e.g: Jupyter, RStudio) sur un cluster Kubernetes.
-				Le catalogue des images disponibles de fait pas partie d'Onyxia, vous pouvez créer le vôtre.`,
+				Un catalogue de service par défaut est disponible mais vous pouvez choisir de créer le vôtre.`,
                 "article data title": undefined,
                 "article data body": undefined,
                 "article envs title": undefined,
