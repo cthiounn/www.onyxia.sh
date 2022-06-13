@@ -50,6 +50,6 @@ export const { ButtonBarButton } = createButtonBarButton({ Icon });
 export const { LanguageSelect } = createLanguageSelect<Language>({
     "languagesPrettyPrint": {
         "en": "English",
-        "fr": "Français"
+        "fr": "Français",
     },
 });

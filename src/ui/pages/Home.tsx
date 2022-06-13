@@ -73,34 +73,31 @@ export function Home() {
                 CheckIcon={TileSvg}
                 classes={{
                     "root": classes.checkListRoot,
-                    "checkIcon": classes.checkIcon
+                    "checkIcon": classes.checkIcon,
                 }}
                 elements={[
                     {
-                        "title": t("fundamental principe 1")
+                        "title": t("fundamental principe 1"),
                     },
                     {
-                        "title": t("fundamental principe 2")
+                        "title": t("fundamental principe 2"),
                     },
                     {
-                        "title": t("fundamental principe 3")
+                        "title": t("fundamental principe 3"),
                     },
                     {
-                        "title": t("fundamental principe 4")
+                        "title": t("fundamental principe 4"),
                     },
                     {
                         "title": t("fundamental principe 5"),
                     },
                     {
-                        "title": t("fundamental principe 6")
+                        "title": t("fundamental principe 6"),
                     },
                 ]}
             />
 
-            <GlCheckList
-                heading={t("datalab core features")}
-                hasAnimation={false}
-            />
+            <GlCheckList heading={t("datalab core features")} hasAnimation={false} />
             <GlArticle
                 title={t("article UI title")}
                 body={t("article UI body")}
@@ -116,7 +113,7 @@ export function Home() {
                             "type": "video/webm",
                         },
                     ],
-                    "hasShadow": false
+                    "hasShadow": false,
                 }}
                 hasAnimation={false}
                 illustrationPosition="left"
@@ -136,7 +133,7 @@ export function Home() {
                             "type": "video/webm",
                         },
                     ],
-                    "hasShadow": false
+                    "hasShadow": false,
                 }}
                 hasAnimation={false}
                 illustrationPosition="right"
@@ -156,7 +153,7 @@ export function Home() {
                             "type": "video/webm",
                         },
                     ],
-                    "hasShadow": false
+                    "hasShadow": false,
                 }}
                 hasAnimation={false}
                 illustrationPosition="left"
@@ -191,24 +188,24 @@ export function Home() {
                 CheckIcon={TileSvg}
                 classes={{
                     "root": classes.checkListRoot,
-                    "checkIcon": classes.checkIcon
+                    "checkIcon": classes.checkIcon,
                 }}
                 elements={[
                     {
                         "title": t("bp title 1"),
-                        "description": t("bp description 1")
+                        "description": t("bp description 1"),
                     },
                     {
                         "title": t("bp title 2"),
-                        "description": t("bp description 2")
+                        "description": t("bp description 2"),
                     },
                     {
                         "title": t("bp title 3"),
-                        "description": t("bp description 3")
+                        "description": t("bp description 3"),
                     },
                     {
                         "title": t("bp title 4"),
-                        "description": t("bp description 4")
+                        "description": t("bp description 4"),
                     },
                     {
                         "title": t("bp title 5"),
@@ -216,7 +213,7 @@ export function Home() {
                     },
                     {
                         "title": t("bp title 6"),
-                        "description": t("bp description 6")
+                        "description": t("bp description 6"),
                     },
                 ]}
             />
@@ -225,7 +222,7 @@ export function Home() {
                 src="https://www.youtube.com/watch?v=1G0J950sWso"
                 hasAnimation={true}
             />
-                        <GlCards>
+            <GlCards>
                 {
                     <>
                         <GlLogoCard
@@ -248,7 +245,7 @@ export function Home() {
 
                         <GlLogoCard
                             title={t("card 3 title")}
-                            paragraph={t("card 3 paragraph") }
+                            paragraph={t("card 3 paragraph")}
                             buttonLabel={t("card 3 button label")}
                             iconUrls={[
                                 "https://user-images.githubusercontent.com/39378411/135731991-3da13e97-c2f7-42b2-88ab-055aff0d6ae9.png",
@@ -284,32 +281,26 @@ const useStyles = makeStyles({ "name": { Home } })(theme => ({
 
             return {};
         })(),
-        "maxWidth": 700
+        "maxWidth": 700,
     },
     "articleImage": {
         "width": (() => {
-
             if (theme.windowInnerWidth > 650) {
                 return 700;
             }
 
             return undefined;
-
-
-        })()
+        })(),
     },
     "articleVideo": {
         "width": (() => {
-
             if (theme.windowInnerWidth > 650) {
                 return 700;
             }
 
             return undefined;
-
-
         })(),
-        "borderRadius": 10
+        "borderRadius": 10,
     },
 
     "textWrapper": {
@@ -324,13 +315,13 @@ const useStyles = makeStyles({ "name": { Home } })(theme => ({
         })(),
     },
     "checkListRoot": {
-        ...theme.spacing.topBottom("margin", 16)
+        ...theme.spacing.topBottom("margin", 16),
     },
     "checkIcon": {
         "& g": {
-            "fill": theme.colors.palette.focus.main
-        }
-    }
+            "fill": theme.colors.palette.focus.main,
+        },
+    },
 }));
 
 export const { i18n } = declareComponentKeys<
@@ -341,16 +332,12 @@ export const { i18n } = declareComponentKeys<
     | "install now"
     | "article UI title"
     | "article UI body"
-
     | "article data title"
     | "article data body"
-
     | "article envs title"
     | "article envs body"
-
     | "article auth title"
     | "article auth body"
-
     | "and much more"
     | "bp title 1"
     | "bp description 1"

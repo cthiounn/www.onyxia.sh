@@ -22,8 +22,6 @@ import { breakpointsValues } from "onyxia-ui";
 import { declareComponentKeys } from "i18nifty";
 import { GlFooter } from "gitlanding/GlFooter";
 
-
-
 /* spell-checker: disable */
 export const App = memo(() => {
     const route = useRoute();
@@ -126,16 +124,23 @@ export const App = memo(() => {
                     "isRetracted": "smart",
                 }}
                 footer={
-                <GlFooter
-                bottomDivContent={`[GitHub](${githubRepoUrl}) - [Documentation](${docsUrl}) - [${t("edit this website")}](${githubRepoUrl}/blob/landingpage/src/ui/i18n.tsx)`}
-                links={[
-                  {
-                    "href": `${githubRepoUrl}/blob/main/LICENSE`,
-                    "label": <img src="https://img.shields.io/npm/l/i18nifty" alt="" />
-                  }
-                ]}
-              />}
-
+                    <GlFooter
+                        bottomDivContent={`[GitHub](${githubRepoUrl}) - [Documentation](${docsUrl}) - [${t(
+                            "edit this website",
+                        )}](https://github.com/InseeFrLab/www.onyxia.sh/blob/main/src/ui/i18n.tsx)`}
+                        links={[
+                            {
+                                "href": `${githubRepoUrl}/blob/main/LICENSE`,
+                                "label": (
+                                    <img
+                                        src="https://img.shields.io/npm/l/i18nifty"
+                                        alt=""
+                                    />
+                                ),
+                            },
+                        ]}
+                    />
+                }
             >
                 {pageNode}
             </GlTemplate>
@@ -147,7 +152,7 @@ export const App = memo(() => {
 export const { i18n } = declareComponentKeys<
     | "install"
     | "pricing"
-    | { K: "it is free software", P: { licenseUrl: string; } ,R: JSX.Element }
+    | { K: "it is free software"; P: { licenseUrl: string }; R: JSX.Element }
     | "try it"
     | "it is libre software"
     | "ok"
@@ -211,7 +216,10 @@ const { PricingDialog } = (() => {
             <Dialog
                 isOpen={isOpen}
                 title={t("it is libre software")}
-                body={t("it is free software", { "licenseUrl": "https://github.com/InseeFrLab/onyxia-web/blob/main/LICENSE" })}
+                body={t("it is free software", {
+                    "licenseUrl":
+                        "https://github.com/InseeFrLab/onyxia-web/blob/main/LICENSE",
+                })}
                 buttons={<Button onClick={onClose}>{t("ok")}</Button>}
                 onClose={onClose}
             />
