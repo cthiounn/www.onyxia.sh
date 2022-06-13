@@ -3,7 +3,7 @@ import { useRoute } from "./router";
 import { FourOhFour } from "./pages/FourOhFour";
 import { GlTemplate } from "gitlanding/GlTemplate";
 import { useSplashScreen } from "onyxia-ui";
-import { Home } from "./pages/Home";
+import { Home, githubRepoUrl, docsUrl } from "./pages/Home";
 import { GlHeader } from "gitlanding/GlHeader";
 import { useTranslation } from "ui/i18n";
 import { makeStyles, Text } from "ui/theme";
@@ -20,10 +20,9 @@ import { useConst } from "powerhooks/useConst";
 import { Evt } from "evt";
 import { breakpointsValues } from "onyxia-ui";
 import { declareComponentKeys } from "i18nifty";
+import { GlFooter } from "gitlanding/GlFooter";
 
-// https://docs.gitlanding.dev/creating-a-page
 
-const githubRepoUrl = "https://github.com/InseeFrLab/onyxia-web";
 
 /* spell-checker: disable */
 export const App = memo(() => {
@@ -65,7 +64,10 @@ export const App = memo(() => {
                 header={
                     <GlHeader
                         title={
-                            <div className={classes.headerTitleWrapper} onClick={onLogoClick}>
+                            <div
+                                className={classes.headerTitleWrapper}
+                                onClick={onLogoClick}
+                            >
                                 <OnyxiaLogoSvg className={classes.logo} />
                                 <div
                                     onClick={onLogoClick}
@@ -89,7 +91,7 @@ export const App = memo(() => {
                         links={[
                             {
                                 "label": "GitHub",
-                                "href": githubRepoUrl
+                                "href": githubRepoUrl,
                             },
                             {
                                 "label": t("install"),
@@ -123,6 +125,17 @@ export const App = memo(() => {
                     "position": "sticky",
                     "isRetracted": "smart",
                 }}
+                footer={
+                <GlFooter
+                bottomDivContent={`[GitHub](${githubRepoUrl}) - [Documentation](${docsUrl}) - [${t("edit this website")}](${githubRepoUrl}/blob/landingpage/src/ui/i18n.tsx)`}
+                links={[
+                  {
+                    "href": `${githubRepoUrl}/blob/main/LICENSE`,
+                    "label": <img src="https://img.shields.io/npm/l/i18nifty" alt="" />
+                  }
+                ]}
+              />}
+
             >
                 {pageNode}
             </GlTemplate>
@@ -132,27 +145,25 @@ export const App = memo(() => {
 });
 
 export const { i18n } = declareComponentKeys<
-        "install" |
-        "pricing" |
-        "paid for by French taxpayers" |
-        "try it" |
-        "it is libre software" |
-        "ok"
+    | "install"
+    | "pricing"
+    | { K: "it is free software", P: { licenseUrl: string; } ,R: JSX.Element }
+    | "try it"
+    | "it is libre software"
+    | "ok"
+    | "edit this website"
 >()({ App });
 
 const useStyles = makeStyles({ "name": { App } })(theme => ({
     "headerTitleWrapper": {
         "display": "flex",
         "cursor": "pointer",
-        "alignItems": "center"
-    },
-    "logoContainer": {
-        "cursor": "pointer",
+        "alignItems": "center",
     },
     "logo": {
         "fill": theme.colors.useCases.typography.textFocus,
         "width": 33,
-        "height": "100%"
+        "height": "100%",
     },
     "headerMainTextContainer": {
         "cursor": "pointer",
@@ -170,52 +181,42 @@ const useStyles = makeStyles({ "name": { App } })(theme => ({
     },
     "languageSelect": {
         "marginLeft": theme.spacing(3),
-        "display": (()=>{
-
-            if( theme.windowInnerWidth >= breakpointsValues.lg ){
+        "display": (() => {
+            if (theme.windowInnerWidth >= breakpointsValues.lg) {
                 return undefined;
             }
 
             return "none";
-
-        })()
-    }
+        })(),
+    },
 }));
 
 const { PricingDialog } = (() => {
-
     type Props = {
         evtOpen: NonPostableEvt<void>;
     };
 
-    const PricingDialog = memo(
-        (props: Props) => {
+    const PricingDialog = memo((props: Props) => {
+        const { evtOpen } = props;
 
-            const { evtOpen } = props;
+        const { t } = useTranslation({ App });
 
-            const { t } = useTranslation({ App });
+        const [isOpen, setIsOpen] = useState(false);
 
-            const [isOpen, setIsOpen] = useState(false);
+        const onClose = useConstCallback(() => setIsOpen(false));
 
-            const onClose = useConstCallback(() => setIsOpen(false));
+        useEvt(ctx => evtOpen.attach(ctx, () => setIsOpen(true)), [evtOpen]);
 
-            useEvt(
-                ctx => evtOpen.attach(ctx, () => setIsOpen(true)),
-                [evtOpen]
-            );
+        return (
+            <Dialog
+                isOpen={isOpen}
+                title={t("it is libre software")}
+                body={t("it is free software", { "licenseUrl": "https://github.com/InseeFrLab/onyxia-web/blob/main/LICENSE" })}
+                buttons={<Button onClick={onClose}>{t("ok")}</Button>}
+                onClose={onClose}
+            />
+        );
+    });
 
-            return (
-                <Dialog
-                    isOpen={isOpen}
-                    title={t("it is libre software")}
-                    body={t("paid for by French taxpayers")}
-                    buttons={<Button onClick={onClose}>{t("ok")}</Button>}
-                    onClose={onClose}
-                />
-            );
-        }
-    );
-
-    return { PricingDialog }
-
+    return { PricingDialog };
 })();

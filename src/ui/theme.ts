@@ -1,7 +1,4 @@
-import {
-    createThemeProvider,
-    defaultGetTypographyDesc
-} from "onyxia-ui";
+import { createThemeProvider, defaultGetTypographyDesc } from "onyxia-ui";
 import { createIcon } from "onyxia-ui/Icon";
 import { createIconButton } from "onyxia-ui/IconButton";
 import { createButton } from "onyxia-ui/Button";
@@ -22,7 +19,7 @@ export const { ThemeProvider, useTheme } = createThemeProvider({
         ...defaultGetTypographyDesc(params),
         "fontFamily": '"Work Sans", sans-serif',
         //"fontFamily": 'Marianne, sans-serif',
-    })
+    }),
 });
 
 export const { makeStyles, useStyles } = createMakeStyles({ useTheme });
@@ -53,7 +50,6 @@ export const { ButtonBarButton } = createButtonBarButton({ Icon });
 export const { LanguageSelect } = createLanguageSelect<Language>({
     "languagesPrettyPrint": {
         "en": "English",
-        "fr": "Français",
-        "zh-CN": "简体中文"
-    }
+        "fr": "Français"
+    },
 });

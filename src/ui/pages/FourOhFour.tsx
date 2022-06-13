@@ -25,6 +25,4 @@ const useStyles = makeStyles({ "name": { FourOhFour } })(theme => ({
     },
 }));
 
-export const { i18n } = declareComponentKeys<
-    "not found"
->()({ FourOhFour });
+export const { i18n } = declareComponentKeys<"not found">()({ FourOhFour });
