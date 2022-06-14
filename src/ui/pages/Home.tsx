@@ -7,7 +7,10 @@ import { useTranslation } from "ui/i18n";
 import { makeStyles } from "ui/theme";
 import { breakpointsValues } from "onyxia-ui";
 import { GlArticle } from "gitlanding/GlArticle";
-import toilLightPngUrl from "ui/assets/img/ToilLight.png";
+import onyxiaUXDarkENUrl from "ui/assets/img/OnyxiaUXDarkEN.png";
+import onyxiaUXDarkFRUrl from "ui/assets/img/OnyxiaUXDarkFR.png";
+import onyxiaUXLightENUrl from "ui/assets/img/OnyxiaUXLightEN.png";
+import onyxiaUXLightFRUrl from "ui/assets/img/OnyxiaUXLightFR.png";
 import { declareComponentKeys } from "i18nifty";
 import mockup1Mp4Url from "ui/assets/video/mockup1.mp4";
 import mockup1WebmUrl from "ui/assets/video/mockup1.webm";
@@ -19,6 +22,7 @@ import keycloakifyDemoMp4Url from "ui/assets/video/Keycloakify_demo.mp4";
 import keycloakifyDemoWebmUrl from "ui/assets/video/Keycloakify_demo.webm";
 import { GlCards } from "gitlanding/GlCards";
 import { GlLogoCard } from "gitlanding/GlCards/GlLogoCard";
+import { useLang } from "ui/i18n";
 
 export const githubRepoUrl = "https://github.com/InseeFrLab/onyxia-web";
 export const docsUrl = `${githubRepoUrl}/tree/main/step-by-step`;
@@ -28,6 +32,7 @@ Home.routeGroup = createGroup([routes.home]);
 export function Home() {
     const { t } = useTranslation({ Home });
     const { classes, theme } = useStyles();
+    const { lang } = useLang();
 
     return (
         <>
@@ -60,7 +65,12 @@ export function Home() {
                 buttonLink={{ "href": "https://install.onyxia.sh" }}
                 illustration={{
                     "type": "image",
-                    "src": theme.isDarkModeEnabled ? toilLightPngUrl : toilLightPngUrl,
+                    "src": (()=>{
+                        switch(lang){
+                            case "en": return theme.isDarkModeEnabled ? onyxiaUXDarkENUrl : onyxiaUXLightENUrl;
+                            case "fr": return theme.isDarkModeEnabled ? onyxiaUXDarkFRUrl : onyxiaUXLightFRUrl;
+                        }
+                    })(),
                     "hasShadow": false,
                 }}
                 classes={{ "image": classes.articleImage }}
