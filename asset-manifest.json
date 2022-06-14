@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.e8317068.chunk.js",
-    "main.js.map": "/static/js/main.e8317068.chunk.js.map",
+    "main.js": "/static/js/main.fe997e61.chunk.js",
+    "main.js.map": "/static/js/main.fe997e61.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7c23acc1.js",
     "runtime-main.js.map": "/static/js/runtime-main.7c23acc1.js.map",
     "static/js/2.5d7ce303.chunk.js": "/static/js/2.5d7ce303.chunk.js",
@@ -11,7 +11,10 @@
     "static/media/Keycloakify_demo.5b07ad68.mp4": "/static/media/Keycloakify_demo.5b07ad68.mp4",
     "static/media/Keycloakify_demo.e098d057.webm": "/static/media/Keycloakify_demo.e098d057.webm",
     "static/media/OnyxiaLogo.5b583358.svg": "/static/media/OnyxiaLogo.5b583358.svg",
-    "static/media/ToilLight.76c4a407.png": "/static/media/ToilLight.76c4a407.png",
+    "static/media/OnyxiaUXDarkEN.c3d35968.png": "/static/media/OnyxiaUXDarkEN.c3d35968.png",
+    "static/media/OnyxiaUXDarkFR.20010e58.png": "/static/media/OnyxiaUXDarkFR.20010e58.png",
+    "static/media/OnyxiaUXLightEN.ad009c0d.png": "/static/media/OnyxiaUXLightEN.ad009c0d.png",
+    "static/media/OnyxiaUXLightFR.ebbe115f.png": "/static/media/OnyxiaUXLightFR.ebbe115f.png",
     "static/media/downArrow.svg": "/static/media/downArrow.23758f40.svg",
     "static/media/hero.9c807fd4.png": "/static/media/hero.9c807fd4.png",
     "static/media/mockup1.57a645af.mp4": "/static/media/mockup1.57a645af.mp4",
@@ -21,6 +24,6 @@
   "entrypoints": [
     "static/js/runtime-main.7c23acc1.js",
     "static/js/2.5d7ce303.chunk.js",
-    "static/js/main.e8317068.chunk.js"
+    "static/js/main.fe997e61.chunk.js"
   ]
 }
