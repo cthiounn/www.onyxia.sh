@@ -25,10 +25,11 @@ export const {
         "en": {
             "App": {
                 "install": "Install",
-                "it is free software": ({ licenseUrl }) => (
+                "it is free software": ({ licenseUrl, inseeUrl, etalabUrl }) => (
                     <>
                         Onyxia is free and open source software{" "}
-                        <MuiLink href={licenseUrl}>under MIT license</MuiLink>
+                        <MuiLink href={licenseUrl}>released under the MIT license</MuiLink>.<br/>
+                        This software is the result of a collaboration between the <MuiLink href={inseeUrl}>INSEE</MuiLink> and <MuiLink href={etalabUrl}>Etalab</MuiLink>
                     </>
                 ),
                 "pricing": "Pricing",
@@ -48,7 +49,7 @@ export const {
                 "install now": "Install now",
                 "article UI title": "An interface for launching data services",
                 "article UI body": `Deploy services and tools on demand with advanced customization options (e.g: Jupyter, RStudio) on a Kubernetes cluster.
-A default catalog of services is available but you can chosse to create your own.`,
+A default catalog of services is available but you can chose to create your own.`,
 
                 "article data title": "Features data storage",
                 "article data body": `Propose a S3-compatible file explorer for object storage. 
@@ -103,10 +104,11 @@ A default catalog of services is available but you can chosse to create your own
         "fr": {
             "App": {
                 "install": "Installer",
-                "it is free software": ({ licenseUrl }) => (
+                "it is free software": ({ licenseUrl, inseeUrl, etalabUrl }) => (
                     <>
                         Onyxia est un logiciel libre et open source{" "}
-                        <MuiLink href={licenseUrl}>sous licence MIT</MuiLink>
+                        <MuiLink href={licenseUrl}>sous licence MIT</MuiLink>.<br/>
+                        Ce logiciel est issu d'une collaboration entre l'<MuiLink href={inseeUrl}>INSEE</MuiLink> et <MuiLink href={etalabUrl}>Etalab</MuiLink>
                     </>
                 ),
                 "pricing": "Prix",

@@ -152,7 +152,7 @@ export const App = memo(() => {
 export const { i18n } = declareComponentKeys<
     | "install"
     | "pricing"
-    | { K: "it is free software"; P: { licenseUrl: string }; R: JSX.Element }
+    | { K: "it is free software"; P: { licenseUrl: string, inseeUrl: string; etalabUrl: string; }; R: JSX.Element }
     | "try it"
     | "it is libre software"
     | "ok"
@@ -212,6 +212,8 @@ const { PricingDialog } = (() => {
 
         useEvt(ctx => evtOpen.attach(ctx, () => setIsOpen(true)), [evtOpen]);
 
+        const { lang } = useLang();
+
         return (
             <Dialog
                 isOpen={isOpen}
@@ -219,6 +221,8 @@ const { PricingDialog } = (() => {
                 body={t("it is free software", {
                     "licenseUrl":
                         "https://github.com/InseeFrLab/onyxia-web/blob/main/LICENSE",
+                    "inseeUrl": `https://www.insee.fr/${lang}`,
+                    "etalabUrl": "https://www.etalab.gouv.fr/"
                 })}
                 buttons={<Button onClick={onClose}>{t("ok")}</Button>}
                 onClose={onClose}
