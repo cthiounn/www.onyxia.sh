@@ -3,4 +3,4 @@ ingress:
   annotations:
     kubernetes.io/ingress.class: nginx
   hosts:
-    - host: onyxia.my-cluster.dev
+    - host: onyxia.my-datalab.net
