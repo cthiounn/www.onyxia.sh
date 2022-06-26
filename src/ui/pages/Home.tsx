@@ -25,7 +25,7 @@ import { GlLogoCard } from "gitlanding/GlCards/GlLogoCard";
 import { useLang } from "ui/i18n";
 
 export const githubRepoUrl = "https://github.com/InseeFrLab/onyxia-web";
-export const docsUrl = `${githubRepoUrl}/tree/main/step-by-step`;
+export const docsUrl = `https://docs.onyxia.sh`;
 
 Home.routeGroup = createGroup([routes.home]);
 
@@ -62,7 +62,7 @@ export function Home() {
                 title={t("what is onyxia title")}
                 body={t("what is onyxia body")}
                 buttonLabel={t("install now")}
-                buttonLink={{ "href": "https://install.onyxia.sh" }}
+                buttonLink={{ "href": docsUrl }}
                 illustration={{
                     "type": "image",
                     "src": (()=>{
