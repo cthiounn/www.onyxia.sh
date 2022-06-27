@@ -93,7 +93,7 @@ export const App = memo(() => {
                             },
                             {
                                 "label": t("install"),
-                                "href": "https://github.com/InseeFrLab/onyxia/tree/master/step-by-step",
+                                "href": docsUrl,
                             },
                             {
                                 "label": t("pricing"),
