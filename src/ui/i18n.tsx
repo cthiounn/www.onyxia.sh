@@ -24,7 +24,7 @@ export const {
     {
         "en": {
             "App": {
-                "contact": "Contact",
+                "contact": "Contact us",
                 "documentation": "Documentation",
                 "it is free software": ({ licenseUrl, inseeUrl, etalabUrl }) => (
                     <>
@@ -104,7 +104,7 @@ A default catalog of services is available but you can chose to create your own.
         /* spell-checker: disable */
         "fr": {
             "App": {
-                "contact": "Contacte",
+                "contact": "Contacter l'équipe",
                 "documentation": "Documentation",
                 "it is free software": ({ licenseUrl, inseeUrl, etalabUrl }) => (
                     <>
