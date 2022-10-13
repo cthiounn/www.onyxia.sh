@@ -24,7 +24,8 @@ export const {
     {
         "en": {
             "App": {
-                "install": "Install",
+                "contact": "Contact",
+                "documentation": "Documentation",
                 "it is free software": ({ licenseUrl, inseeUrl, etalabUrl }) => (
                     <>
                         Onyxia is free and open source software{" "}
@@ -33,7 +34,7 @@ export const {
                     </>
                 ),
                 "pricing": "Pricing",
-                "try it": "Try it",
+                "demo instance": "Demo instance",
                 "it is libre software": "It is libre software",
                 "ok": "Ok",
                 "edit this website": "Edit this website",
@@ -103,7 +104,8 @@ A default catalog of services is available but you can chose to create your own.
         /* spell-checker: disable */
         "fr": {
             "App": {
-                "install": "Installer",
+                "contact": "Contacte",
+                "documentation": "Documentation",
                 "it is free software": ({ licenseUrl, inseeUrl, etalabUrl }) => (
                     <>
                         Onyxia est un logiciel libre et open source{" "}
@@ -112,7 +114,7 @@ A default catalog of services is available but you can chose to create your own.
                     </>
                 ),
                 "pricing": "Prix",
-                "try it": "Demo",
+                "demo instance": "Instance de démonstration",
                 "it is libre software": "C'est un logiciel libre",
                 "ok": "D'accord",
                 "edit this website": "Modifier ce site",
