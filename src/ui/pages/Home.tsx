@@ -12,8 +12,10 @@ import onyxiaUXDarkFRUrl from "ui/assets/img/OnyxiaUXDarkFR.png";
 import onyxiaUXLightENUrl from "ui/assets/img/OnyxiaUXLightEN.png";
 import onyxiaUXLightFRUrl from "ui/assets/img/OnyxiaUXLightFR.png";
 import { declareComponentKeys } from "i18nifty";
-import mockup1Mp4Url from "ui/assets/video/mockup1.mp4";
-import mockup1WebmUrl from "ui/assets/video/mockup1.webm";
+import catalogMp4Url from "ui/assets/video/catalog.mp4";
+import catalogWebmUrl from "ui/assets/video/catalog.webm";
+import launcherMp4Url from "ui/assets/video/launcher.mp4";
+import launcherWebmUrl from "ui/assets/video/launcher.webm";
 import heroImageUrl from "ui/assets/img/hero.png";
 import { GlCheckList } from "gitlanding/GlCheckList";
 import { ReactComponent as TileSvg } from "../assets/svg/tile.svg";
@@ -115,11 +117,11 @@ export function Home() {
                     "type": "video",
                     "sources": [
                         {
-                            "src": mockup1Mp4Url,
+                            "src": catalogMp4Url,
                             "type": 'video/mp4; codecs="hvc1"',
                         },
                         {
-                            "src": mockup1WebmUrl,
+                            "src": catalogWebmUrl,
                             "type": "video/webm",
                         },
                     ],
@@ -135,11 +137,11 @@ export function Home() {
                     "type": "video",
                     "sources": [
                         {
-                            "src": mockup1Mp4Url,
+                            "src": launcherMp4Url,
                             "type": 'video/mp4; codecs="hvc1"',
                         },
                         {
-                            "src": mockup1WebmUrl,
+                            "src": launcherWebmUrl,
                             "type": "video/webm",
                         },
                     ],
@@ -147,26 +149,6 @@ export function Home() {
                 }}
                 hasAnimation={false}
                 illustrationPosition="right"
-            />
-            <GlArticle
-                title={t("article envs title")}
-                body={t("article envs body")}
-                illustration={{
-                    "type": "video",
-                    "sources": [
-                        {
-                            "src": mockup1Mp4Url,
-                            "type": 'video/mp4; codecs="hvc1"',
-                        },
-                        {
-                            "src": mockup1WebmUrl,
-                            "type": "video/webm",
-                        },
-                    ],
-                    "hasShadow": false,
-                }}
-                hasAnimation={false}
-                illustrationPosition="left"
             />
             <GlArticle
                 title={t("article auth title")}
@@ -190,7 +172,7 @@ export function Home() {
                     "video": classes.articleVideo,
                 }}
                 hasAnimation={true}
-                illustrationPosition="right"
+                illustrationPosition="left"
             />
             <GlCheckList
                 heading={t("and much more")}
