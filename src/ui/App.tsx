@@ -89,25 +89,25 @@ export const App = memo(() => {
                         links={[
                             {
                                 "label": "GitHub",
-                                "href": githubRepoUrl,
+                                "href": githubRepoUrl
                             },
                             {
                                 "label": t("documentation"),
-                                "href": docsUrl,
+                                "href": docsUrl
                             },
                             {
                                 "label": t("contact"),
-                                "href": "https://join.slack.com/t/3innovation/shared_invite/zt-1hnzukjcn-6biCSmVy4qvyDGwbNI~sWg",
+                                "href": "https://join.slack.com/t/3innovation/shared_invite/zt-1hnzukjcn-6biCSmVy4qvyDGwbNI~sWg"
                             },
                             {
                                 "label": t("pricing"),
                                 "onClick": () => evtOpenPricingDialog.post(),
-                                "href": "#",
+                                "href": "#"
                             },
                             {
                                 "label": t("demo instance"),
-                                "href": "https://datalab.sspcloud.fr/catalog",
-                            },
+                                "href": "https://datalab.sspcloud.fr/catalog"
+                            }
                         ]}
                         enableDarkModeSwitch={true}
                         githubRepoUrl={githubRepoUrl}
@@ -125,12 +125,12 @@ export const App = memo(() => {
                 }
                 headerOptions={{
                     "position": "sticky",
-                    "isRetracted": "smart",
+                    "isRetracted": "smart"
                 }}
                 footer={
                     <GlFooter
                         bottomDivContent={`[GitHub](${githubRepoUrl}) - [Documentation](${docsUrl}) - [${t(
-                            "edit this website",
+                            "edit this website"
                         )}](https://github.com/InseeFrLab/www.onyxia.sh/blob/main/src/ui/i18n.tsx)`}
                         links={[
                             {
@@ -140,8 +140,8 @@ export const App = memo(() => {
                                         src="https://img.shields.io/npm/l/i18nifty"
                                         alt=""
                                     />
-                                ),
-                            },
+                                )
+                            }
                         ]}
                     />
                 }
@@ -157,7 +157,11 @@ export const { i18n } = declareComponentKeys<
     | "documentation"
     | "contact"
     | "pricing"
-    | { K: "it is free software"; P: { licenseUrl: string, inseeUrl: string; etalabUrl: string; }; R: JSX.Element }
+    | {
+          K: "it is free software";
+          P: { licenseUrl: string; inseeUrl: string; etalabUrl: string };
+          R: JSX.Element;
+      }
     | "demo instance"
     | "it is libre software"
     | "ok"
@@ -168,26 +172,26 @@ const useStyles = makeStyles({ "name": { App } })(theme => ({
     "headerTitleWrapper": {
         "display": "flex",
         "cursor": "pointer",
-        "alignItems": "center",
+        "alignItems": "center"
     },
     "logo": {
         "fill": theme.colors.useCases.typography.textFocus,
         "width": 33,
-        "height": "100%",
+        "height": "100%"
     },
     "headerMainTextContainer": {
         "cursor": "pointer",
         "& > *": {
-            "display": "inline",
-        },
+            "display": "inline"
+        }
     },
     "headerOnyxiaText": {
-        ...theme.spacing.rightLeft("margin", 2),
+        ...theme.spacing.rightLeft("margin", 2)
     },
     "headerDatalabText": {
         //...theme.spacing.rightLeft("margin", 2),
         "fontWeight": 600,
-        "color": theme.colors.useCases.typography.textFocus,
+        "color": theme.colors.useCases.typography.textFocus
     },
     "languageSelect": {
         "marginLeft": theme.spacing(3),
@@ -197,8 +201,8 @@ const useStyles = makeStyles({ "name": { App } })(theme => ({
             }
 
             return "none";
-        })(),
-    },
+        })()
+    }
 }));
 
 const { PricingDialog } = (() => {

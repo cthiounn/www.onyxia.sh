@@ -23,8 +23,8 @@ import keycloakifyDemoWebmUrl from "ui/assets/video/Keycloakify_demo.webm";
 import { GlCards } from "gitlanding/GlCards";
 import { GlLogoCard } from "gitlanding/GlCards/GlLogoCard";
 import { useLang } from "ui/i18n";
-const mockup1Mp4Url= "/mockup1.mp4";
-const mockup1WebmUrl= "/mockup1.webm";
+const mockup1Mp4Url = "/mockup1.mp4";
+const mockup1WebmUrl = "/mockup1.webm";
 
 export const githubRepoUrl = "https://github.com/InseeFrLab/onyxia-web";
 export const docsUrl = `https://docs.onyxia.sh`;
@@ -51,13 +51,13 @@ export function Home() {
                 illustration={{
                     "type": "image",
                     "src": heroImageUrl,
-                    "hasShadow": false,
+                    "hasShadow": false
                 }}
                 hasLinkToSectionBellow={true}
                 classes={{
                     "subtitle": classes.subtitle,
                     "illustrationWrapper": classes.heroIllustrationWrapper,
-                    "textWrapper": classes.textWrapper,
+                    "textWrapper": classes.textWrapper
                 }}
             />
             <GlArticle
@@ -67,13 +67,19 @@ export function Home() {
                 buttonLink={{ "href": docsUrl }}
                 illustration={{
                     "type": "image",
-                    "src": (()=>{
-                        switch(lang){
-                            case "en": return theme.isDarkModeEnabled ? onyxiaUXDarkENUrl : onyxiaUXLightENUrl;
-                            case "fr": return theme.isDarkModeEnabled ? onyxiaUXDarkFRUrl : onyxiaUXLightFRUrl;
+                    "src": (() => {
+                        switch (lang) {
+                            case "en":
+                                return theme.isDarkModeEnabled
+                                    ? onyxiaUXDarkENUrl
+                                    : onyxiaUXLightENUrl;
+                            case "fr":
+                                return theme.isDarkModeEnabled
+                                    ? onyxiaUXDarkFRUrl
+                                    : onyxiaUXLightFRUrl;
                         }
                     })(),
-                    "hasShadow": false,
+                    "hasShadow": false
                 }}
                 classes={{ "image": classes.articleImage }}
                 hasAnimation={true}
@@ -85,27 +91,27 @@ export function Home() {
                 CheckIcon={TileSvg}
                 classes={{
                     "root": classes.checkListRoot,
-                    "checkIcon": classes.checkIcon,
+                    "checkIcon": classes.checkIcon
                 }}
                 elements={[
                     {
-                        "title": t("fundamental principe 1"),
+                        "title": t("fundamental principe 1")
                     },
                     {
-                        "title": t("fundamental principe 2"),
+                        "title": t("fundamental principe 2")
                     },
                     {
-                        "title": t("fundamental principe 3"),
+                        "title": t("fundamental principe 3")
                     },
                     {
-                        "title": t("fundamental principe 4"),
+                        "title": t("fundamental principe 4")
                     },
                     {
-                        "title": t("fundamental principe 5"),
+                        "title": t("fundamental principe 5")
                     },
                     {
-                        "title": t("fundamental principe 6"),
-                    },
+                        "title": t("fundamental principe 6")
+                    }
                 ]}
             />
 
@@ -118,14 +124,14 @@ export function Home() {
                     "sources": [
                         {
                             "src": mockup1Mp4Url,
-                            "type": "video/mp4",
+                            "type": "video/mp4"
                         },
                         {
                             "src": mockup1WebmUrl,
-                            "type": "video/webm",
-                        },
+                            "type": "video/webm"
+                        }
                     ],
-                    "hasShadow": false,
+                    "hasShadow": false
                 }}
                 hasAnimation={false}
                 illustrationPosition="left"
@@ -138,14 +144,14 @@ export function Home() {
                     "sources": [
                         {
                             "src": mockup1Mp4Url,
-                            "type": "video/mp4",
+                            "type": "video/mp4"
                         },
                         {
                             "src": mockup1WebmUrl,
-                            "type": "video/webm",
-                        },
+                            "type": "video/webm"
+                        }
                     ],
-                    "hasShadow": false,
+                    "hasShadow": false
                 }}
                 hasAnimation={false}
                 illustrationPosition="right"
@@ -158,14 +164,14 @@ export function Home() {
                     "sources": [
                         {
                             "src": mockup1Mp4Url,
-                            "type": "video/mp4",
+                            "type": "video/mp4"
                         },
                         {
                             "src": mockup1WebmUrl,
-                            "type": "video/webm",
-                        },
+                            "type": "video/webm"
+                        }
                     ],
-                    "hasShadow": false,
+                    "hasShadow": false
                 }}
                 hasAnimation={false}
                 illustrationPosition="left"
@@ -179,17 +185,17 @@ export function Home() {
                     "sources": [
                         {
                             "src": keycloakifyDemoMp4Url,
-                            "type": 'video/mp4; codecs="hvc1"',
+                            "type": 'video/mp4; codecs="hvc1"'
                         },
                         {
                             "src": keycloakifyDemoWebmUrl,
-                            "type": "video/webm",
-                        },
+                            "type": "video/webm"
+                        }
                     ],
-                    "hasShadow": false,
+                    "hasShadow": false
                 }}
                 classes={{
-                    "video": classes.articleVideo,
+                    "video": classes.articleVideo
                 }}
                 hasAnimation={true}
                 illustrationPosition="right"
@@ -200,33 +206,33 @@ export function Home() {
                 CheckIcon={TileSvg}
                 classes={{
                     "root": classes.checkListRoot,
-                    "checkIcon": classes.checkIcon,
+                    "checkIcon": classes.checkIcon
                 }}
                 elements={[
                     {
                         "title": t("bp title 1"),
-                        "description": t("bp description 1"),
+                        "description": t("bp description 1")
                     },
                     {
                         "title": t("bp title 2"),
-                        "description": t("bp description 2"),
+                        "description": t("bp description 2")
                     },
                     {
                         "title": t("bp title 3"),
-                        "description": t("bp description 3"),
+                        "description": t("bp description 3")
                     },
                     {
                         "title": t("bp title 4"),
-                        "description": t("bp description 4"),
+                        "description": t("bp description 4")
                     },
                     {
                         "title": t("bp title 5"),
-                        "description": t("bp description 5"),
+                        "description": t("bp description 5")
                     },
                     {
                         "title": t("bp title 6"),
-                        "description": t("bp description 6"),
-                    },
+                        "description": t("bp description 6")
+                    }
                 ]}
             />
             <GlYoutubeVideoSection
@@ -243,7 +249,7 @@ export function Home() {
                             buttonLabel={t("card 1 button label")}
                             iconUrls={[
                                 "https://user-images.githubusercontent.com/39378411/135731999-a2d8f901-3d7d-40a9-b59f-102ee1facc45.png",
-                                "https://user-images.githubusercontent.com/39378411/135731995-136d4baf-58a6-4cb3-a72c-b8ddce835b3c.png",
+                                "https://user-images.githubusercontent.com/39378411/135731995-136d4baf-58a6-4cb3-a72c-b8ddce835b3c.png"
                             ]}
                         />
                         <GlLogoCard
@@ -251,7 +257,7 @@ export function Home() {
                             paragraph={t("card 2 paragraph")}
                             buttonLabel={t("card 2 button label")}
                             iconUrls={[
-                                "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png",
+                                "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png"
                             ]}
                         />
 
@@ -263,7 +269,7 @@ export function Home() {
                                 "https://user-images.githubusercontent.com/39378411/135731991-3da13e97-c2f7-42b2-88ab-055aff0d6ae9.png",
                                 "https://user-images.githubusercontent.com/39378411/135731994-29a3c46a-0d92-4ec8-954e-39bfeeb06534.png",
                                 "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png",
-                                "https://user-images.githubusercontent.com/39378411/135731990-8f64ce8e-d655-4ded-9561-3d7f6893d06e.png",
+                                "https://user-images.githubusercontent.com/39378411/135731990-8f64ce8e-d655-4ded-9561-3d7f6893d06e.png"
                             ]}
                             overlapIcons={true}
                         />
@@ -277,23 +283,23 @@ export function Home() {
 const useStyles = makeStyles({ "name": { Home } })(theme => ({
     "title2": {
         "color": theme.colors.useCases.typography.textFocus,
-        "fontStyle": "italic",
+        "fontStyle": "italic"
     },
     "subtitle": {
-        "color": theme.colors.useCases.typography.textPrimary,
+        "color": theme.colors.useCases.typography.textPrimary
     },
     "heroIllustrationWrapper": {
         ...(() => {
             if (theme.windowInnerWidth >= breakpointsValues.lg) {
                 return {
                     "paddingRight": 30,
-                    "paddingLeft": 30,
+                    "paddingLeft": 30
                 };
             }
 
             return {};
         })(),
-        "maxWidth": 700,
+        "maxWidth": 700
     },
     "articleImage": {
         "width": (() => {
@@ -302,7 +308,7 @@ const useStyles = makeStyles({ "name": { Home } })(theme => ({
             }
 
             return undefined;
-        })(),
+        })()
     },
     "articleVideo": {
         "width": (() => {
@@ -312,28 +318,28 @@ const useStyles = makeStyles({ "name": { Home } })(theme => ({
 
             return undefined;
         })(),
-        "borderRadius": 10,
+        "borderRadius": 10
     },
 
     "textWrapper": {
         ...(() => {
             if (theme.windowInnerWidth >= breakpointsValues.lg) {
                 return {
-                    "marginLeft": 70,
+                    "marginLeft": 70
                 };
             }
 
             return {};
-        })(),
+        })()
     },
     "checkListRoot": {
-        ...theme.spacing.topBottom("margin", 16),
+        ...theme.spacing.topBottom("margin", 16)
     },
     "checkIcon": {
         "& g": {
-            "fill": theme.colors.palette.focus.main,
-        },
-    },
+            "fill": theme.colors.palette.focus.main
+        }
+    }
 }));
 
 export const { i18n } = declareComponentKeys<

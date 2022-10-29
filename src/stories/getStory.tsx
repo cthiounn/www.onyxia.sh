@@ -7,7 +7,7 @@ import {
     useIsDarkModeEnabled,
     chromeFontSizesFactors,
     breakpointsValues,
-    useWindowInnerSize,
+    useWindowInnerSize
 } from "onyxia-ui";
 import type { ThemeProviderProps, ChromeFontSize } from "onyxia-ui";
 import { ThemeProvider, Text, useStyles } from "ui/theme";
@@ -34,11 +34,11 @@ export function getStoryFactory<Props>(params: {
         sectionName,
         wrappedComponent,
         argTypes = {},
-        defaultContainerWidth,
+        defaultContainerWidth
     } = params;
 
     const Component: React.ComponentType<Props> = Object.entries(wrappedComponent).map(
-        ([, component]) => component,
+        ([, component]) => component
     )[0];
 
     function ScreenSize() {
@@ -93,7 +93,7 @@ export function getStoryFactory<Props>(params: {
             ...props
         } = Object.assign(
             propsByTitle.get(title)!,
-            templateProps,
+            templateProps
         ) as typeof templateProps;
 
         const { setIsDarkModeEnabled } = useIsDarkModeEnabled();
@@ -113,9 +113,9 @@ export function getStoryFactory<Props>(params: {
         >(
             ({ windowInnerWidth }) => ({
                 "targetBrowserFontSizeFactor": chromeFontSizesFactors[chromeFontSize],
-                "targetWindowInnerWidth": targetWindowInnerWidth || windowInnerWidth,
+                "targetWindowInnerWidth": targetWindowInnerWidth || windowInnerWidth
             }),
-            [targetWindowInnerWidth, chromeFontSize],
+            [targetWindowInnerWidth, chromeFontSize]
         );
 
         const { theme } = useStyles();
@@ -126,12 +126,12 @@ export function getStoryFactory<Props>(params: {
                     <GlobalStyles
                         styles={{
                             "html": {
-                                "fontSize": "100% !important",
+                                "fontSize": "100% !important"
                             },
                             "body": {
                                 "padding": `0 !important`,
-                                "backgroundColor": `${theme.colors.useCases.surfaces.surface1} !important`,
-                            },
+                                "backgroundColor": `${theme.colors.useCases.surfaces.surface1} !important`
+                            }
                         }}
                     />
                 }
@@ -142,7 +142,7 @@ export function getStoryFactory<Props>(params: {
                             "marginLeft": 50,
                             "width": containerWidth || undefined,
                             "border": "1px dotted grey",
-                            "display": "inline-block",
+                            "display": "inline-block"
                         }}
                     >
                         <RouteProvider>
@@ -163,7 +163,7 @@ export function getStoryFactory<Props>(params: {
             "targetWindowInnerWidth": 0,
             "chromeFontSize": "Medium (Recommended)",
             "lang": fallbackLanguage,
-            ...props,
+            ...props
         };
 
         propsByTitle.set(title, out.args);
@@ -181,41 +181,41 @@ export function getStoryFactory<Props>(params: {
                         "type": "range",
                         "min": 0,
                         "max": 1920,
-                        "step": 1,
-                    },
+                        "step": 1
+                    }
                 },
                 "targetWindowInnerWidth": {
                     "control": {
                         "type": "range",
                         "min": 0,
                         "max": 2560,
-                        "step": 10,
-                    },
+                        "step": 10
+                    }
                 },
                 "chromeFontSize": {
                     "options": objectKeys(chromeFontSizesFactors),
-                    "control": { "type": "select" },
+                    "control": { "type": "select" }
                 },
                 "lang": {
                     "options": languages,
                     "control": {
-                        "type": "inline-radio",
-                    },
+                        "type": "inline-radio"
+                    }
                 },
-                ...argTypes,
-            },
+                ...argTypes
+            }
         }),
-        getStory,
+        getStory
     };
 }
 
 export function logCallbacks<T extends string>(
-    propertyNames: readonly T[],
+    propertyNames: readonly T[]
 ): Record<T, () => void> {
     const out: Record<T, () => void> = id<Record<string, never>>({});
 
     propertyNames.forEach(
-        propertyName => (out[propertyName] = console.log.bind(console, propertyName)),
+        propertyName => (out[propertyName] = console.log.bind(console, propertyName))
     );
 
     return out;

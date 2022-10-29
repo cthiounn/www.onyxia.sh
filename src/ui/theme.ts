@@ -17,9 +17,9 @@ import { createOnyxiaSplashScreenLogo } from "onyxia-ui/lib/SplashScreen";
 export const { ThemeProvider, useTheme } = createThemeProvider({
     "getTypographyDesc": params => ({
         ...defaultGetTypographyDesc(params),
-        "fontFamily": '"Work Sans", sans-serif',
+        "fontFamily": '"Work Sans", sans-serif'
         //"fontFamily": 'Marianne, sans-serif',
-    }),
+    })
 });
 
 export const { makeStyles, useStyles } = createMakeStyles({ useTheme });
@@ -27,7 +27,7 @@ export const { makeStyles, useStyles } = createMakeStyles({ useTheme });
 /** @see: <https://material-ui.com/components/material-icons/> */
 export const { Icon } = createIcon({
     "accessTime": AccessTimeIcon,
-    "sentimentSatisfied": SentimentSatisfiedIcon,
+    "sentimentSatisfied": SentimentSatisfiedIcon
 });
 
 export type IconId = Param0<typeof Icon>["iconId"];
@@ -40,7 +40,7 @@ const { OnyxiaSplashScreenLogo } = createOnyxiaSplashScreenLogo({ useTheme });
 
 export const splashScreen: ThemeProviderProps["splashScreen"] = {
     "Logo": OnyxiaSplashScreenLogo,
-    "minimumDisplayDuration": 0,
+    "minimumDisplayDuration": 0
 };
 
 export const { PageHeader } = createPageHeader({ Icon });
@@ -50,6 +50,6 @@ export const { ButtonBarButton } = createButtonBarButton({ Icon });
 export const { LanguageSelect } = createLanguageSelect<Language>({
     "languagesPrettyPrint": {
         "en": "English",
-        "fr": "Français",
-    },
+        "fr": "Français"
+    }
 });
