@@ -22,8 +22,6 @@ import { ReactComponent as TileSvg } from "../assets/svg/tile.svg";
 import { GlYoutubeVideoSection } from "gitlanding/GlYoutubeVideoSection";
 import keycloakifyDemoMp4Url from "ui/assets/video/Keycloakify_demo.mp4";
 import keycloakifyDemoWebmUrl from "ui/assets/video/Keycloakify_demo.webm";
-import { GlCards } from "gitlanding/GlCards";
-import { GlLogoCard } from "gitlanding/GlCards/GlLogoCard";
 import { useLang } from "ui/i18n";
 
 export const githubRepoUrl = "https://github.com/InseeFrLab/onyxia-web";
@@ -214,42 +212,6 @@ export function Home() {
                 src="https://www.youtube.com/watch?v=1G0J950sWso"
                 hasAnimation={true}
             />
-            <GlCards>
-                {
-                    <>
-                        <GlLogoCard
-                            title={t("card 1 title")}
-                            paragraph={t("card 1 paragraph")}
-                            buttonLabel={t("card 1 button label")}
-                            iconUrls={[
-                                "https://user-images.githubusercontent.com/39378411/135731999-a2d8f901-3d7d-40a9-b59f-102ee1facc45.png",
-                                "https://user-images.githubusercontent.com/39378411/135731995-136d4baf-58a6-4cb3-a72c-b8ddce835b3c.png",
-                            ]}
-                        />
-                        <GlLogoCard
-                            title={t("card 2 title")}
-                            paragraph={t("card 2 paragraph")}
-                            buttonLabel={t("card 2 button label")}
-                            iconUrls={[
-                                "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png",
-                            ]}
-                        />
-
-                        <GlLogoCard
-                            title={t("card 3 title")}
-                            paragraph={t("card 3 paragraph")}
-                            buttonLabel={t("card 3 button label")}
-                            iconUrls={[
-                                "https://user-images.githubusercontent.com/39378411/135731991-3da13e97-c2f7-42b2-88ab-055aff0d6ae9.png",
-                                "https://user-images.githubusercontent.com/39378411/135731994-29a3c46a-0d92-4ec8-954e-39bfeeb06534.png",
-                                "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png",
-                                "https://user-images.githubusercontent.com/39378411/135731990-8f64ce8e-d655-4ded-9561-3d7f6893d06e.png",
-                            ]}
-                            overlapIcons={true}
-                        />
-                    </>
-                }
-            </GlCards>
         </>
     );
 }
