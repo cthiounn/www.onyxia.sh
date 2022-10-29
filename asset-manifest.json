@@ -1,29 +1,21 @@
 {
   "files": {
-    "main.js": "/static/js/main.fecce115.chunk.js",
-    "main.js.map": "/static/js/main.fecce115.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.7c23acc1.js",
-    "runtime-main.js.map": "/static/js/runtime-main.7c23acc1.js.map",
-    "static/js/2.5d7ce303.chunk.js": "/static/js/2.5d7ce303.chunk.js",
-    "static/js/2.5d7ce303.chunk.js.map": "/static/js/2.5d7ce303.chunk.js.map",
+    "main.js": "/static/js/main.fda97908.js",
+    "static/media/mockup1.mp4": "/static/media/mockup1.57a645afe85df6e170ba.mp4",
+    "static/media/mockup1.webm": "/static/media/mockup1.5e5b87825d5742aa478d.webm",
+    "static/media/Keycloakify_demo.mp4": "/static/media/Keycloakify_demo.5b07ad68404fa82f2393.mp4",
+    "static/media/hero.png": "/static/media/hero.9c807fd445d9b017d3d6.png",
+    "static/media/Keycloakify_demo.webm": "/static/media/Keycloakify_demo.e098d05761ce708d7fc0.webm",
+    "static/media/OnyxiaUXDarkFR.png": "/static/media/OnyxiaUXDarkFR.20010e5813e19c606e22.png",
+    "static/media/OnyxiaUXDarkEN.png": "/static/media/OnyxiaUXDarkEN.c3d3596896c3dce7cc5c.png",
+    "static/media/OnyxiaUXLightEN.png": "/static/media/OnyxiaUXLightEN.ad009c0de1eedaccbb6c.png",
+    "static/media/OnyxiaUXLightFR.png": "/static/media/OnyxiaUXLightFR.ebbe115f138fda116378.png",
     "index.html": "/index.html",
-    "static/js/2.5d7ce303.chunk.js.LICENSE.txt": "/static/js/2.5d7ce303.chunk.js.LICENSE.txt",
-    "static/media/Keycloakify_demo.5b07ad68.mp4": "/static/media/Keycloakify_demo.5b07ad68.mp4",
-    "static/media/Keycloakify_demo.e098d057.webm": "/static/media/Keycloakify_demo.e098d057.webm",
-    "static/media/OnyxiaLogo.5b583358.svg": "/static/media/OnyxiaLogo.5b583358.svg",
-    "static/media/OnyxiaUXDarkEN.c3d35968.png": "/static/media/OnyxiaUXDarkEN.c3d35968.png",
-    "static/media/OnyxiaUXDarkFR.20010e58.png": "/static/media/OnyxiaUXDarkFR.20010e58.png",
-    "static/media/OnyxiaUXLightEN.ad009c0d.png": "/static/media/OnyxiaUXLightEN.ad009c0d.png",
-    "static/media/OnyxiaUXLightFR.ebbe115f.png": "/static/media/OnyxiaUXLightFR.ebbe115f.png",
-    "static/media/downArrow.svg": "/static/media/downArrow.23758f40.svg",
-    "static/media/hero.9c807fd4.png": "/static/media/hero.9c807fd4.png",
-    "static/media/mockup1.57a645af.mp4": "/static/media/mockup1.57a645af.mp4",
-    "static/media/mockup1.5e5b8782.webm": "/static/media/mockup1.5e5b8782.webm",
-    "static/media/tile.7cb52a42.svg": "/static/media/tile.7cb52a42.svg"
+    "static/media/OnyxiaLogo.svg": "/static/media/OnyxiaLogo.5b583358669e40552bc0b80491167714.svg",
+    "static/media/tile.svg": "/static/media/tile.7cb52a42c82cc8f0b0609770e2f6131a.svg",
+    "main.fda97908.js.map": "/static/js/main.fda97908.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.7c23acc1.js",
-    "static/js/2.5d7ce303.chunk.js",
-    "static/js/main.fecce115.chunk.js"
+    "static/js/main.fda97908.js"
   ]
 }
