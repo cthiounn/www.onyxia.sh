@@ -19,7 +19,6 @@ import launcherWebmUrl from "ui/assets/video/launcher.webm";
 import heroImageUrl from "ui/assets/img/hero.png";
 import { GlCheckList } from "gitlanding/GlCheckList";
 import { ReactComponent as TileSvg } from "../assets/svg/tile.svg";
-import { GlYoutubeVideoSection } from "gitlanding/GlYoutubeVideoSection";
 import keycloakifyDemoMp4Url from "ui/assets/video/Keycloakify_demo.mp4";
 import keycloakifyDemoWebmUrl from "ui/assets/video/Keycloakify_demo.webm";
 import { useLang } from "ui/i18n";
@@ -234,7 +233,7 @@ const useStyles = makeStyles({ "name": { Home } })(theme => ({
         })(),
     },
     "checkListRoot": {
-        ...theme.spacing.topBottom("margin", 16),
+        //...theme.spacing.topBottom("margin", 16),
     },
     "checkIcon": {
         "& g": {
