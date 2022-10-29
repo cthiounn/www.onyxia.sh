@@ -116,7 +116,7 @@ export function Home() {
                     "sources": [
                         {
                             "src": mockup1Mp4Url,
-                            "type": "video/mp4",
+                            "type": 'video/mp4; codecs="hvc1"',
                         },
                         {
                             "src": mockup1WebmUrl,
@@ -136,7 +136,7 @@ export function Home() {
                     "sources": [
                         {
                             "src": mockup1Mp4Url,
-                            "type": "video/mp4",
+                            "type": 'video/mp4; codecs="hvc1"',
                         },
                         {
                             "src": mockup1WebmUrl,
@@ -156,7 +156,7 @@ export function Home() {
                     "sources": [
                         {
                             "src": mockup1Mp4Url,
-                            "type": "video/mp4",
+                            "type": 'video/mp4; codecs="hvc1"',
                         },
                         {
                             "src": mockup1WebmUrl,
