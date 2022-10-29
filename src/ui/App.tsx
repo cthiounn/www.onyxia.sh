@@ -88,52 +88,45 @@ export const App = memo(() => {
                         }
                         links={[
                             {
-                                "label": t("documentation"),
-                                "href": docsUrl
+                                "label": "GitHub",
+                                "href": githubRepoUrl,
                             },
                             {
-                                "label": t("contact"),
-                                "href": "https://join.slack.com/t/3innovation/shared_invite/zt-1hnzukjcn-6biCSmVy4qvyDGwbNI~sWg"
+                                "label": t("install"),
+                                "href": "https://github.com/InseeFrLab/onyxia/tree/master/step-by-step",
                             },
                             {
                                 "label": t("pricing"),
                                 "onClick": () => evtOpenPricingDialog.post(),
-                                "href": "#"
+                                "href": "#",
                             },
                             {
-                                "label": t("demo instance"),
-                                "href": "https://datalab.sspcloud.fr/catalog"
+                                "label": t("try it"),
+                                "href": "https://datalab.sspcloud.fr/catalog",
                             },
-                            {
-                                "label": "GitHub",
-                                "href": githubRepoUrl
-                            }
                         ]}
                         enableDarkModeSwitch={true}
                         githubRepoUrl={githubRepoUrl}
                         githubButtonSize="large"
                         showGithubStarCount={true}
-                        customItemEnd={{
-                            "item": (
-                                <LanguageSelect
-                                    className={classes.languageSelect}
-                                    language={lang}
-                                    onLanguageChange={setLang}
-                                    variant="big"
-                                />
-                            ),
-                            "behaviorOnSmallDevice": "hide"
-                        }}
+                        customItemEnd={
+                            <LanguageSelect
+                                className={classes.languageSelect}
+                                language={lang}
+                                onLanguageChange={setLang}
+                                variant="big"
+                            />
+                        }
                     />
                 }
                 headerOptions={{
                     "position": "sticky",
-                    "isRetracted": "smart"
+                    "isRetracted": "smart",
                 }}
                 footer={
                     <GlFooter
                         bottomDivContent={`[GitHub](${githubRepoUrl}) - [Documentation](${docsUrl}) - [${t(
-                            "edit this website"
+                            "edit this website",
                         )}](https://github.com/InseeFrLab/www.onyxia.sh/blob/main/src/ui/i18n.tsx)`}
                         links={[
                             {
@@ -143,28 +136,24 @@ export const App = memo(() => {
                                         src="https://img.shields.io/npm/l/i18nifty"
                                         alt=""
                                     />
-                                )
-                            }
+                                ),
+                            },
                         ]}
                     />
                 }
-                body={pageNode}
-            />
+            >
+                {pageNode}
+            </GlTemplate>
             <PricingDialog evtOpen={evtOpenPricingDialog} />
         </>
     );
 });
 
 export const { i18n } = declareComponentKeys<
-    | "documentation"
-    | "contact"
+    | "install"
     | "pricing"
-    | {
-        K: "it is free software";
-        P: { licenseUrl: string; inseeUrl: string; etalabUrl: string };
-        R: JSX.Element;
-    }
-    | "demo instance"
+    | { K: "it is free software"; P: { licenseUrl: string, inseeUrl: string; etalabUrl: string; }; R: JSX.Element }
+    | "try it"
     | "it is libre software"
     | "ok"
     | "edit this website"
@@ -174,26 +163,26 @@ const useStyles = makeStyles({ "name": { App } })(theme => ({
     "headerTitleWrapper": {
         "display": "flex",
         "cursor": "pointer",
-        "alignItems": "center"
+        "alignItems": "center",
     },
     "logo": {
         "fill": theme.colors.useCases.typography.textFocus,
         "width": 33,
-        "height": "100%"
+        "height": "100%",
     },
     "headerMainTextContainer": {
         "cursor": "pointer",
         "& > *": {
-            "display": "inline"
-        }
+            "display": "inline",
+        },
     },
     "headerOnyxiaText": {
-        ...theme.spacing.rightLeft("margin", 2)
+        ...theme.spacing.rightLeft("margin", 2),
     },
     "headerDatalabText": {
         //...theme.spacing.rightLeft("margin", 2),
         "fontWeight": 600,
-        "color": theme.colors.useCases.typography.textFocus
+        "color": theme.colors.useCases.typography.textFocus,
     },
     "languageSelect": {
         "marginLeft": theme.spacing(3),
@@ -203,8 +192,8 @@ const useStyles = makeStyles({ "name": { App } })(theme => ({
             }
 
             return "none";
-        })()
-    }
+        })(),
+    },
 }));
 
 const { PricingDialog } = (() => {

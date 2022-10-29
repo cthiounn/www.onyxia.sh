@@ -11,7 +11,7 @@ export const {
     useTranslation,
     resolveLocalizedString,
     useLang,
-    useResolveLocalizedString
+    useResolveLocalizedString,
 } = createI18nApi<
     | typeof import("./App").i18n
     | typeof import("./pages/Home").i18n
@@ -19,30 +19,24 @@ export const {
 >()(
     {
         languages,
-        fallbackLanguage
+        fallbackLanguage,
     },
     {
         "en": {
             "App": {
-                "contact": "Contact us",
-                "documentation": "Documentation",
+                "install": "Install",
                 "it is free software": ({ licenseUrl, inseeUrl, etalabUrl }) => (
                     <>
                         Onyxia is free and open source software{" "}
-                        <MuiLink href={licenseUrl}>
-                            released under the MIT license
-                        </MuiLink>
-                        .<br />
-                        This software is the result of a collaboration between the{" "}
-                        <MuiLink href={inseeUrl}>INSEE</MuiLink> and{" "}
-                        <MuiLink href={etalabUrl}>Etalab</MuiLink>
+                        <MuiLink href={licenseUrl}>released under the MIT license</MuiLink>.<br/>
+                        This software is the result of a collaboration between the <MuiLink href={inseeUrl}>INSEE</MuiLink> and <MuiLink href={etalabUrl}>Etalab</MuiLink>
                     </>
                 ),
                 "pricing": "Pricing",
-                "demo instance": "Demo instance",
+                "try it": "Try it",
                 "it is libre software": "It is libre software",
                 "ok": "Ok",
-                "edit this website": "Edit this website"
+                "edit this website": "Edit this website",
             },
             "Home": {
                 "orange title": "The data oriented cloud platform",
@@ -100,31 +94,28 @@ A default catalog of services is available but you can chose to create your own.
                 "card 3 title": "...",
                 "card 3 paragraph": `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 		Duis mattis luctus auctor. Pellentesque quis molestie tellus, ac laoreet arcu. Fusce egestas fermentum convallis.`,
-                "card 3 button label": "..."
+                "card 3 button label": "...",
             },
             "FourOhFour": {
-                "not found": "Page not found"
-            }
+                "not found": "Page not found",
+            },
         },
         /* spell-checker: disable */
         "fr": {
             "App": {
-                "contact": "Contacter l'équipe",
-                "documentation": "Documentation",
+                "install": "Installer",
                 "it is free software": ({ licenseUrl, inseeUrl, etalabUrl }) => (
                     <>
                         Onyxia est un logiciel libre et open source{" "}
-                        <MuiLink href={licenseUrl}>sous licence MIT</MuiLink>.<br />
-                        Ce logiciel est issu d'une collaboration entre l'
-                        <MuiLink href={inseeUrl}>INSEE</MuiLink> et{" "}
-                        <MuiLink href={etalabUrl}>Etalab</MuiLink>
+                        <MuiLink href={licenseUrl}>sous licence MIT</MuiLink>.<br/>
+                        Ce logiciel est issu d'une collaboration entre l'<MuiLink href={inseeUrl}>INSEE</MuiLink> et <MuiLink href={etalabUrl}>Etalab</MuiLink>
                     </>
                 ),
                 "pricing": "Prix",
-                "demo instance": "Instance de démonstration",
+                "try it": "Demo",
                 "it is libre software": "C'est un logiciel libre",
                 "ok": "D'accord",
-                "edit this website": "Modifier ce site"
+                "edit this website": "Modifier ce site",
             },
             "Home": {
                 "orange title": "La plate-forme cloud orientée données",
@@ -175,12 +166,12 @@ A default catalog of services is available but you can chose to create your own.
                 "card 2 button label": undefined,
                 "card 3 title": undefined,
                 "card 3 paragraph": undefined,
-                "card 3 button label": undefined
+                "card 3 button label": undefined,
             },
             "FourOhFour": {
-                "not found": "Page non trouvée"
-            }
-        }
-    }
+                "not found": "Page non trouvée",
+            },
+        },
+    },
     /* spell-checker: enable */
 );
