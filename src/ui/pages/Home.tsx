@@ -77,36 +77,6 @@ export function Home() {
                 hasAnimation={true}
                 illustrationPosition="right"
             />
-            <GlCheckList
-                heading={t("fundamental principles")}
-                hasAnimation={true}
-                Icon={TileSvg}
-                classes={{
-                    "root": classes.checkListRoot,
-                    "checkIcon": classes.checkIcon,
-                }}
-                elements={[
-                    {
-                        "title": t("fundamental principe 1"),
-                    },
-                    {
-                        "title": t("fundamental principe 2"),
-                    },
-                    {
-                        "title": t("fundamental principe 3"),
-                    },
-                    {
-                        "title": t("fundamental principe 4"),
-                    },
-                    {
-                        "title": t("fundamental principe 5"),
-                    },
-                    {
-                        "title": t("fundamental principe 6"),
-                    },
-                ]}
-            />
-
             <GlCheckList heading={t("datalab core features")} hasAnimation={false} />
             <GlArticle
                 title={t("article UI title")}
