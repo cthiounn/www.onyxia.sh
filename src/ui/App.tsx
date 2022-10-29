@@ -109,20 +109,24 @@ export const App = memo(() => {
                         githubRepoUrl={githubRepoUrl}
                         githubButtonSize="large"
                         showGithubStarCount={true}
-                        customItemEnd={
-                            <LanguageSelect
-                                className={classes.languageSelect}
-                                language={lang}
-                                onLanguageChange={setLang}
-                                variant="big"
-                            />
-                        }
+                        customItemEnd={{
+                            "item": (
+                                <LanguageSelect
+                                    className={classes.languageSelect}
+                                    language={lang}
+                                    onLanguageChange={setLang}
+                                    variant="big"
+                                />
+                            ),
+                            "behaviorOnSmallDevice": "hide"
+                        }}
                     />
                 }
                 headerOptions={{
                     "position": "sticky",
                     "isRetracted": "smart",
                 }}
+                body={pageNode}
                 footer={
                     <GlFooter
                         bottomDivContent={`[GitHub](${githubRepoUrl}) - [Documentation](${docsUrl}) - [${t(
@@ -141,9 +145,7 @@ export const App = memo(() => {
                         ]}
                     />
                 }
-            >
-                {pageNode}
-            </GlTemplate>
+            />
             <PricingDialog evtOpen={evtOpenPricingDialog} />
         </>
     );
