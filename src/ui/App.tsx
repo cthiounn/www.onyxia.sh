@@ -113,14 +113,17 @@ export const App = memo(() => {
                         githubRepoUrl={githubRepoUrl}
                         githubButtonSize="large"
                         showGithubStarCount={true}
-                        customItemEnd={
-                            <LanguageSelect
-                                className={classes.languageSelect}
-                                language={lang}
-                                onLanguageChange={setLang}
-                                variant="big"
-                            />
-                        }
+                        customItemEnd={{
+                            "item": (
+                                <LanguageSelect
+                                    className={classes.languageSelect}
+                                    language={lang}
+                                    onLanguageChange={setLang}
+                                    variant="big"
+                                />
+                            ),
+                            "behaviorOnSmallDevice": "hide"
+                        }}
                     />
                 }
                 headerOptions={{
@@ -145,9 +148,8 @@ export const App = memo(() => {
                         ]}
                     />
                 }
-            >
-                {pageNode}
-            </GlTemplate>
+                body={pageNode}
+            />
             <PricingDialog evtOpen={evtOpenPricingDialog} />
         </>
     );
@@ -158,10 +160,10 @@ export const { i18n } = declareComponentKeys<
     | "contact"
     | "pricing"
     | {
-          K: "it is free software";
-          P: { licenseUrl: string; inseeUrl: string; etalabUrl: string };
-          R: JSX.Element;
-      }
+        K: "it is free software";
+        P: { licenseUrl: string; inseeUrl: string; etalabUrl: string };
+        R: JSX.Element;
+    }
     | "demo instance"
     | "it is libre software"
     | "ok"

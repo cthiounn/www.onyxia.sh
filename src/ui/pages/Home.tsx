@@ -86,7 +86,7 @@ export function Home() {
             <GlCheckList
                 heading={t("fundamental principles")}
                 hasAnimation={true}
-                CheckIcon={TileSvg}
+                Icon={TileSvg}
                 classes={{
                     "root": classes.checkListRoot,
                     "checkIcon": classes.checkIcon
@@ -201,7 +201,7 @@ export function Home() {
             <GlCheckList
                 heading={t("and much more")}
                 hasAnimation={true}
-                CheckIcon={TileSvg}
+                Icon={TileSvg}
                 classes={{
                     "root": classes.checkListRoot,
                     "checkIcon": classes.checkIcon
