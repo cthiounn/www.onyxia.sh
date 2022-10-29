@@ -88,10 +88,6 @@ export const App = memo(() => {
                         }
                         links={[
                             {
-                                "label": "GitHub",
-                                "href": githubRepoUrl
-                            },
-                            {
                                 "label": t("documentation"),
                                 "href": docsUrl
                             },
@@ -107,6 +103,10 @@ export const App = memo(() => {
                             {
                                 "label": t("demo instance"),
                                 "href": "https://datalab.sspcloud.fr/catalog"
+                            },
+                            {
+                                "label": "GitHub",
+                                "href": githubRepoUrl
                             }
                         ]}
                         enableDarkModeSwitch={true}
