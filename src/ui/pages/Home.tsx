@@ -177,11 +177,6 @@ export function Home() {
                     },
                 ]}
             />
-            <GlYoutubeVideoSection
-                title={t("youtube video title")}
-                src="https://www.youtube.com/watch?v=1G0J950sWso"
-                hasAnimation={true}
-            />
         </>
     );
 }
