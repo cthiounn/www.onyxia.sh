@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.js": "/static/js/main.fda97908.js",
-    "static/media/mockup1.mp4": "/static/media/mockup1.57a645afe85df6e170ba.mp4",
-    "static/media/mockup1.webm": "/static/media/mockup1.5e5b87825d5742aa478d.webm",
+    "main.js": "/static/js/main.66118243.js",
+    "static/media/launcher.mp4": "/static/media/launcher.bf8620a99d66318b3a27.mp4",
+    "static/media/launcher.webm": "/static/media/launcher.ad30ba69fdf88df15fb9.webm",
+    "static/media/catalog.mp4": "/static/media/catalog.86a65c49c1fa50426324.mp4",
     "static/media/Keycloakify_demo.mp4": "/static/media/Keycloakify_demo.5b07ad68404fa82f2393.mp4",
+    "static/media/catalog.webm": "/static/media/catalog.437f01c3afdff693338a.webm",
     "static/media/hero.png": "/static/media/hero.9c807fd445d9b017d3d6.png",
     "static/media/Keycloakify_demo.webm": "/static/media/Keycloakify_demo.e098d05761ce708d7fc0.webm",
     "static/media/OnyxiaUXDarkFR.png": "/static/media/OnyxiaUXDarkFR.20010e5813e19c606e22.png",
@@ -13,9 +15,9 @@
     "index.html": "/index.html",
     "static/media/OnyxiaLogo.svg": "/static/media/OnyxiaLogo.5b583358669e40552bc0b80491167714.svg",
     "static/media/tile.svg": "/static/media/tile.7cb52a42c82cc8f0b0609770e2f6131a.svg",
-    "main.fda97908.js.map": "/static/js/main.fda97908.js.map"
+    "main.66118243.js.map": "/static/js/main.66118243.js.map"
   },
   "entrypoints": [
-    "static/js/main.fda97908.js"
+    "static/js/main.66118243.js"
   ]
 }
