@@ -92,8 +92,12 @@ export const App = memo(() => {
                                 "href": githubRepoUrl,
                             },
                             {
-                                "label": t("install"),
-                                "href": "https://github.com/InseeFrLab/onyxia/tree/master/step-by-step",
+                                "label": t("documentation"),
+                                "href": docsUrl,
+                            },
+                            {
+                                "label": t("contact"),
+                                "href": "https://join.slack.com/t/3innovation/shared_invite/zt-1hnzukjcn-6biCSmVy4qvyDGwbNI~sWg",
                             },
                             {
                                 "label": t("pricing"),
@@ -101,7 +105,7 @@ export const App = memo(() => {
                                 "href": "#",
                             },
                             {
-                                "label": t("try it"),
+                                "label": t("demo instance"),
                                 "href": "https://datalab.sspcloud.fr/catalog",
                             },
                         ]}
@@ -152,10 +156,11 @@ export const App = memo(() => {
 });
 
 export const { i18n } = declareComponentKeys<
-    | "install"
+    | "documentation"
+    | "contact"
     | "pricing"
     | { K: "it is free software"; P: { licenseUrl: string, inseeUrl: string; etalabUrl: string; }; R: JSX.Element }
-    | "try it"
+    | "demo instance"
     | "it is libre software"
     | "ok"
     | "edit this website"

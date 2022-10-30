@@ -76,10 +76,9 @@ export function Home() {
                 hasAnimation={true}
                 illustrationPosition="right"
             />
-            <GlCheckList heading={t("datalab core features")} hasAnimation={false} />
             <GlArticle
-                title={t("article UI title")}
-                body={t("article UI body")}
+                title={t("article 1 title")}
+                body={t("article 1 body")}
                 illustration={{
                     "type": "video",
                     "sources": [
@@ -98,8 +97,8 @@ export function Home() {
                 illustrationPosition="left"
             />
             <GlArticle
-                title={t("article data title")}
-                body={t("article data body")}
+                title={t("article 2 title")}
+                body={t("article 2 body")}
                 illustration={{
                     "type": "video",
                     "sources": [
@@ -118,8 +117,8 @@ export function Home() {
                 illustrationPosition="right"
             />
             <GlArticle
-                title={t("article auth title")}
-                body={t("article auth body")}
+                title={t("article 3 title")}
+                body={t("article 3 body")}
                 buttonLink={{ "href": docsUrl }}
                 illustration={{
                     "type": "video",
@@ -142,7 +141,6 @@ export function Home() {
                 illustrationPosition="left"
             />
             <GlCheckList
-                heading={t("and much more")}
                 hasAnimation={true}
                 Icon={TileSvg}
                 classes={{
@@ -248,15 +246,12 @@ export const { i18n } = declareComponentKeys<
     | "what is onyxia title"
     | "what is onyxia body"
     | "install now"
-    | "article UI title"
-    | "article UI body"
-    | "article data title"
-    | "article data body"
-    | "article envs title"
-    | "article envs body"
-    | "article auth title"
-    | "article auth body"
-    | "and much more"
+    | "article 1 title"
+    | "article 1 body"
+    | "article 2 title"
+    | "article 2 body"
+    | "article 3 title"
+    | "article 3 body"
     | "bp title 1"
     | "bp description 1"
     | "bp title 2"
@@ -269,22 +264,4 @@ export const { i18n } = declareComponentKeys<
     | "bp description 5"
     | "bp title 6"
     | "bp description 6"
-    | "fundamental principles"
-    | "fundamental principe 1"
-    | "fundamental principe 2"
-    | "fundamental principe 3"
-    | "fundamental principe 4"
-    | "fundamental principe 5"
-    | "fundamental principe 6"
-    | "datalab core features"
-    | "youtube video title"
-    | "card 1 title"
-    | "card 1 paragraph"
-    | "card 1 button label"
-    | "card 2 title"
-    | "card 2 paragraph"
-    | "card 2 button label"
-    | "card 3 title"
-    | "card 3 paragraph"
-    | "card 3 button label"
 >()({ Home });

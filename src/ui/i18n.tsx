@@ -24,7 +24,8 @@ export const {
     {
         "en": {
             "App": {
-                "install": "Install",
+                "contact": "Contact us",
+                "documentation": "Documentation",
                 "it is free software": ({ licenseUrl, inseeUrl, etalabUrl }) => (
                     <>
                         Onyxia is free and open source software{" "}
@@ -33,7 +34,7 @@ export const {
                     </>
                 ),
                 "pricing": "Pricing",
-                "try it": "Try it",
+                "demo instance": "Demo instance",
                 "it is libre software": "It is libre software",
                 "ok": "Ok",
                 "edit this website": "Edit this website",
@@ -46,55 +47,44 @@ export const {
                 "what is onyxia body": `Onyxia is a web app that installs on [Kubernetes](https://hubernetes.io) cluster.  
                 It provides to your data scientist a nice and intuitive interface to launch on demand [containers](https://wwww.docker.com/) like [Spark, RStudio or Jupyter](https://datalab/sppcloud.fr/catalog) on demand.  
                 On top of that Onyxia features a tight S3 integration via [MINIO](https://min.io/) or [AWS](https://aws.amazon.com/s3/) and [Vault](https://www.vaultproject.io) for managing sensitive information.`,
-                "install now": "Install now",
-                "article UI title": "An interface for launching data services",
-                "article UI body": `Deploy services and tools on demand with advanced customization options (e.g: Jupyter, RStudio) on a Kubernetes cluster.
-A default catalog of services is available but you can chose to create your own.`,
-
-                "article data title": "Features data storage",
-                "article data body": `Propose a S3-compatible file explorer for object storage. 
-		Stored files are easily accessible via a simple URL, which can be shared, or directly from datalab services 
-		for better reproducibility of analyses.`,
-                "article envs title": "Store and manage  environment variables",
-                "article envs body": `Store and manage sensitive environment variables, database credentials, 
-		API keys, etc. In addition to being able to store secrets, decrypt data stored elsewhere. `,
-                "article auth title": "Authentication and authorization",
-                "article auth body": `Users can create their own accounts and authenticate with their own credentials.`,
-                "and much more": "And much more...",
-                "bp title 1": "bullet point title 1",
-                "bp description 1": "bullet point body 1",
-                "bp title 2": "bullet point title 2",
-                "bp description 2": "bullet point body 2",
-                "bp title 3": "bullet point title 3",
-                "bp description 3": "bullet point body 3",
-                "bp title 4": "bullet point title 4",
-                "bp description 4": "bullet point body 4",
-                "bp title 5": "bullet point title 5",
-                "bp description 5": "bullet point body 5",
-                "bp title 6": "bullet point title 6",
-                "bp description 6": "bullet point body 6",
-                "datalab core features": "Datalab core features",
-                "fundamental principles": "Fundamental principles",
-                "fundamental principe 1": "Production oriented",
-                "fundamental principe 2": "No proprietary lock-in",
-                "fundamental principe 3": "Deploy easily on Kubernetes",
-                "fundamental principe 4": "100% cloud-native",
-                "fundamental principe 5": "100% open source",
-                "fundamental principe 6": "User friendly",
-                "youtube video title": "Hands-on with Onyxia",
-
-                "card 1 title": "Read and contribute",
-                "card 1 paragraph": `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis luctus auctor. 
-		Pellentesque quis molestie tellus, ac laoreet arcu. Fusce egestas fermentum convallis.`,
-                "card 1 button label": "See the Github Repository",
-                "card 2 title": "...",
-                "card 2 paragraph": `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis luctus auctor. 
-		Pellentesque quis molestie tellus, ac laoreet arcu. Fusce egestas fermentum convallis.`,
-                "card 2 button label": "...",
-                "card 3 title": "...",
-                "card 3 paragraph": `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-		Duis mattis luctus auctor. Pellentesque quis molestie tellus, ac laoreet arcu. Fusce egestas fermentum convallis.`,
-                "card 3 button label": "...",
+                "install now": "Guide de déploiment",
+                "article 1 title": "Construisez votre catalog ou réutilisez le nôtre",
+                "article 1 body": `Construisez une offre de service sur mesure pour votre métier en metant en place 
+                votre propre dépot de chart Helm ou réutilisez le nôtre.  
+                Onyxia transforme un repo Helm en un catalog de service.`,
+                "article 2 title": `Configuration des services`,
+                "article 2 body": `Onyxia génére automatiquement un formulaire qui permet aux utilisateur 
+                d'écraser les valeurs pas défault des \`values.yaml\` de vos chart helm.
+                Onyxia vous permet également de précisée des valeurs a préremplire spécifiquement
+                pour l'utilisateur en question.
+                Ce mecanisme permet notament a l'utilisateur d'être déjà autentifier a S3 et d'avoir acces
+                a son bucket personel dès l'ouverture de Jupyter ou Rstudio.`,
+                "article 3 title": `Un système d'autentification versatile`,
+                "article 3 body": `Onyxia s'intègre avec Keycloak via openidconnect. Restraignez 
+                l'inscription aux services aux utilisateur détenteur d'une email d'un domaine spécifique.  
+                Onyxia est distribuer avec un theme Keycloak pour offrire une experience utilisateur 
+                homogène.`,
+                "bp title 1": "Libre",
+                "bp description 1": `Onyxia est un logiciel libre sous licence MIT`,
+                "bp title 2": "Technologiquement agnostique",
+                "bp description 2": `Avec Onyxia vous n'investisez pas sur une stack technique en particulier.
+                Onyxia permet de rendre accessible nimporte quelle technologie cloud native et ne génére 
+                donc pas de potentielle dette technique future.  
+                `,
+                "bp title 3": "Onyxia ne cherche pas a se rendre indispensable",
+                "bp description 3": `Nous visons a rendre les utilisateurs de la plaforme sufisament 
+                famillier avec les technoliges sougeacente (Kuberneter, helm, S3...) pour pouvoir s'affranchire 
+                d'Onyxia.  Nous affichons les commandes  executer sur le cluster par le biais d'Onyxia.`,
+                "bp title 4": `Un explorateur de fichier S3`,
+                "bp description 4": `Onyxia permet de glisser déposer ses dataset pour les uploader sur S3.`,
+                "bp title 5": `Integration avec Vault`,
+                "bp description 5": `Onyxia permet de stoquer les informations sensibles de types 
+                clef d'API dans Vault et de les rendre accécible dans les services sous forme de variable
+                d'environement.`,
+                "bp title 6": `Customisation cosmétique`,
+                "bp description 6": `Onyxia offre de nombreuse option de personalisations.
+                Modifiez le thème, le lien et le logo du header sans avoir a forker Onyxia. Mais uniquement
+                en modifiant les paramètre de votre instance.`,
             },
             "FourOhFour": {
                 "not found": "Page not found",
@@ -103,70 +93,69 @@ A default catalog of services is available but you can chose to create your own.
         /* spell-checker: disable */
         "fr": {
             "App": {
-                "install": "Installer",
+                "contact": "Contact us",
+                "documentation": "Documentation",
                 "it is free software": ({ licenseUrl, inseeUrl, etalabUrl }) => (
                     <>
-                        Onyxia est un logiciel libre et open source{" "}
-                        <MuiLink href={licenseUrl}>sous licence MIT</MuiLink>.<br/>
-                        Ce logiciel est issu d'une collaboration entre l'<MuiLink href={inseeUrl}>INSEE</MuiLink> et <MuiLink href={etalabUrl}>Etalab</MuiLink>
+                        Onyxia is free and open source software{" "}
+                        <MuiLink href={licenseUrl}>released under the MIT license</MuiLink>.<br/>
+                        This software is the result of a collaboration between the <MuiLink href={inseeUrl}>INSEE</MuiLink> and <MuiLink href={etalabUrl}>Etalab</MuiLink>
                     </>
                 ),
-                "pricing": "Prix",
-                "try it": "Demo",
-                "it is libre software": "C'est un logiciel libre",
-                "ok": "D'accord",
-                "edit this website": "Modifier ce site",
+                "pricing": "Pricing",
+                "demo instance": "Demo instance",
+                "it is libre software": "It is libre software",
+                "ok": "Ok",
+                "edit this website": "Edit this website",
             },
             "Home": {
                 "orange title": "La plate-forme cloud orientée données",
                 "subTitle":
                     "Fournissez un environnement de travail à l'état de l'art à vos data scientists sans dépendre de logiciels propriétaires.",
                 "what is onyxia title": "Qu'est-ce qu'Onyxia?",
-                "what is onyxia body": `Onyxia est une application web qui s'installe sur un cluster [Kubernetes](https://kubernetes.io/).  
-            Elle fournit à vos data scientists une interface intuitive et agréable pour lancer des [conteneurs](https://www.docker.com/) comme [Spark, RStudio ou Jupyter](https://datalab.sspcloud.fr/catalog/) à la demande
-            et propose une intégration avec un stockage S3 ([MinIO](https://min.io/) ou [Amazon S3](https://aws.amazon.com/s3/)) pour travailler avec des données et [Vault](https://www.vaultproject.io/) pour la gestion sécurisée des informations sensibles.
-            `,
-                "install now": "Installer maintenant",
-                "article UI title": "Une interface pour lancer des services data",
-                "article UI body": `Déployez des services et des outils à la demande avec des options de personnalisation avancées (CPU, GPU...) sur un cluster Kubernetes.
-				Un catalogue de services par défaut est disponible mais vous pouvez choisir de créer le vôtre.`,
-                "article data title": undefined,
-                "article data body": undefined,
-                "article envs title": undefined,
-                "article envs body": undefined,
-                "article auth title": "Authentification et autorisation",
-                "article auth body": undefined,
-                "and much more": "Et bien plus...",
-                "bp title 1": undefined,
-                "bp description 1": undefined,
-                "bp title 2": undefined,
-                "bp description 2": undefined,
-                "bp title 3": undefined,
-                "bp description 3": undefined,
-                "bp title 4": undefined,
-                "bp description 4": undefined,
-                "bp title 5": undefined,
-                "bp description 5": undefined,
-                "bp title 6": undefined,
-                "bp description 6": undefined,
-                "datalab core features": "Principales fonctionnalités",
-                "fundamental principles": "Fundamental principles",
-                "fundamental principe 1": "Production oriented",
-                "fundamental principe 2": "No proprietary lock-in",
-                "fundamental principe 3": "Deploy easily on Kubernetes",
-                "fundamental principe 4": "100% cloud-native",
-                "fundamental principe 5": "100% open source",
-                "fundamental principe 6": "User friendly",
-                "youtube video title": "Prise en main d'Onyxia",
-                "card 1 title": undefined,
-                "card 1 paragraph": undefined,
-                "card 1 button label": undefined,
-                "card 2 title": undefined,
-                "card 2 paragraph": undefined,
-                "card 2 button label": undefined,
-                "card 3 title": undefined,
-                "card 3 paragraph": undefined,
-                "card 3 button label": undefined,
+                "what is onyxia body": `Une webapp [Kubernetes](https://kubernetes.io/) qui vous
+                    permet de fournir a vos data scientists une interface intuitive et agréable pour lancer des services orienté data comme [Spark, RStudio ou Jupyter](https://datalab.sspcloud.fr/catalog/). 
+                    Onyxa prevoit aussi une integration avec un stockage S3 ([MinIO](https://min.io/) ou 
+                    [Amazon S3](https://aws.amazon.com/s3/)) et avec [Vault](https://www.vaultproject.io/) pour la 
+                    gestion sécurisée des informations sensibles.`,
+                "install now": "Guide de déploiment",
+                "article 1 title": "Construisez votre catalog ou réutilisez le nôtre",
+                "article 1 body": `Construisez une offre de service sur mesure pour votre métier en metant en place 
+                votre propre dépot de chart Helm ou réutilisez le nôtre.  
+                Onyxia transforme un repo Helm en un catalog de service.`,
+                "article 2 title": `Configuration des services`,
+                "article 2 body": `Onyxia génére automatiquement un formulaire qui permet aux utilisateur 
+                d'écraser les valeurs pas défault des \`values.yaml\` de vos chart helm.
+                Onyxia vous permet également de précisée des valeurs a préremplire spécifiquement
+                pour l'utilisateur en question.
+                Ce mecanisme permet notament a l'utilisateur d'être déjà autentifier a S3 et d'avoir acces
+                a son bucket personel dès l'ouverture de Jupyter ou Rstudio.`,
+                "article 3 title": `Un système d'autentification versatile`,
+                "article 3 body": `Onyxia s'intègre avec Keycloak via openidconnect. Restraignez 
+                l'inscription aux services aux utilisateur détenteur d'une email d'un domaine spécifique.  
+                Onyxia est distribuer avec un theme Keycloak pour offrire une experience utilisateur 
+                homogène.`,
+                "bp title 1": "Libre",
+                "bp description 1": `Onyxia est un logiciel libre sous licence MIT`,
+                "bp title 2": "Technologiquement agnostique",
+                "bp description 2": `Avec Onyxia vous n'investisez pas sur une stack technique en particulier.
+                Onyxia permet de rendre accessible nimporte quelle technologie cloud native et ne génére 
+                donc pas de potentielle dette technique future.  
+                `,
+                "bp title 3": "Onyxia ne cherche pas a se rendre indispensable",
+                "bp description 3": `Nous visons a rendre les utilisateurs de la plaforme sufisament 
+                famillier avec les technoliges sougeacente (Kuberneter, helm, S3...) pour pouvoir s'affranchire 
+                d'Onyxia.  Nous affichons les commandes  executer sur le cluster par le biais d'Onyxia.`,
+                "bp title 4": `Un explorateur de fichier S3`,
+                "bp description 4": `Onyxia permet de glisser déposer ses dataset pour les uploader sur S3.`,
+                "bp title 5": `Integration avec Vault`,
+                "bp description 5": `Onyxia permet de stoquer les informations sensibles de types 
+                clef d'API dans Vault et de les rendre accécible dans les services sous forme de variable
+                d'environement.`,
+                "bp title 6": `Customisation cosmétique`,
+                "bp description 6": `Onyxia offre de nombreuse option de personalisations.
+                Modifiez le thème, le lien et le logo du header sans avoir a forker Onyxia. Mais uniquement
+                en modifiant les paramètre de votre instance.`,
             },
             "FourOhFour": {
                 "not found": "Page non trouvée",
