@@ -124,57 +124,57 @@ export const {
                     "Fournissez un environnement de travail à l'état de l'art à vos data scientists sans dépendre de logiciels propriétaires.",
                 "what is onyxia title": "Qu'est-ce qu'Onyxia?",
                 "what is onyxia body": `Onyxia est une application web qui permet aux 
-                    datacientis d'acceder à un environement de travail a l'état 
+                    data cientists d'accéder à un environnement de travail a l'état 
                     de l'art même sans être très pointu en informatique.
-                    Essenciellement, Onyxia trensforme un repo de chart [Helm](https://helm.sh) en un catalogue de services
-                    configurable.  
+                    Essentiellement, Onyxia transforme un repo de chart [Helm](https://helm.sh) en un catalogue de services
+                    configurables et configurés automatiquement.  
                     Onyxia propose également une intégration avec S3.`,
                 "install now": "Guide de déploiment",
-                "article 1 title": "Construisez votre catalog ou réutilisez les nôtres",
+                "article 1 title": "Construisez votre catalogue ou réutilisez les nôtres",
                 "article 1 body": `Construisez une offre de service sur mesure pour votre métier en metant en place 
-                votre propre dépot de chart Helm ou réutilisez les nôtres: [interactive-services](https://github.com/InseeFrLab/helm-charts-interactive-services), [databases](https://github.com/InseeFrLab/helm-charts-databases), [automation](https://github.com/InseeFrLab/helm-charts-automation), ...`,
+                votre propre dépôt de chart Helm ou réutilisez les nôtres: [interactive-services](https://github.com/InseeFrLab/helm-charts-interactive-services), [databases](https://github.com/InseeFrLab/helm-charts-databases), [automation](https://github.com/InseeFrLab/helm-charts-automation), ...`,
                 "article 2 title": `Configuration des services`,
                 "article 2 body": `Onyxia génére automatiquement un formulaire qui permet aux utilisateurs
                 d'écraser les valeurs pas défault des \`values.yaml\` de vos charts Helm.
-                Onyxia vous permet également de précisée des valeurs a préremplire spécifiquement
+                Onyxia vous permet également de préciser des valeurs a préremplire spécifiquement
                 pour l'utilisateur en question.
-                Ce mecanisme permet notament a l'utilisateur d'être déjà autentifier a S3 et d'avoir acces
-                a son bucket personel dès l'ouverture de Jupyter ou Rstudio.`,
+                Ce mecanisme permet notamment à l'utilisateur d'être déjà authentifié à S3 et d'avoir accès
+                à son bucket personel dès l'ouverture de Jupyter ou Rstudio.`,
 
-                "article 3 title": `Un système d'autentification versatile`,
-                "article 3 body": `Onyxia s'intègre avec Keycloak via openidconnect. Restraignez 
-                    l'inscription aux services aux utilisateur détenteur d'une email d'un domaine spécifique.  
-                    Onyxia est distribuer avec un theme Keycloak pour offrire une experience utilisateur 
+                "article 3 title": `Un système d'authentification versatile`,
+                "article 3 body": `Onyxia s'intègre avec Keycloak via openidconnect. Restreignez 
+                    l'inscription aux services aux utilisateurs détenteurs d'un email d'un domaine spécifique.  
+                    Onyxia est distribué avec un thème Keycloak pour offrir une expérience utilisateur 
                     homogène.`,
 
-                "bp title 1": "Onyxia ne cherche pas a se rendre indispensable",
-                "bp description 1": `Nous visons a rendre les utilisateurs de la plaforme sufisament 
-                    famillier avec les technoliges sougeacente (Kuberneter, helm, S3...) pour pouvoir s'affranchire 
-                    d'Onyxia.  Nous affichons les commandes  executer sur le cluster par le biais d'Onyxia.`,
+                "bp title 1": "Onyxia ne cherche pas à se rendre indispensable",
+                "bp description 1": `Nous visons à rendre les utilisateurs de la plateforme sufisamment 
+                    familier avec les technologies sous-jacente (Kubernetes, helm, S3...) pour pouvoir s'affranchir 
+                    d'Onyxia.  Nous affichons les commandes  exécutées sur le cluster, sur S3, sur Vault par le biais d'Onyxia.`,
 
                 "bp title 2": `Un explorateur de fichier S3`,
-                "bp description 2": `Onyxia permet de glisser déposer ses dataset pour les uploader sur S3.`,
+                "bp description 2": `Onyxia permet de glisser déposer ses jeux de données pour les uploader sur S3.`,
 
-                "bp title 3": `Integration avec [HashiCorp Vault](https://www.vaultproject.io)`,
-                "bp description 3": `Onyxia permet de stoquer les informations sensibles de types 
-                    clef d'API dans Vault et de les rendre accécible dans les services sous forme de variable`,
+                "bp title 3": `Intégration avec [HashiCorp Vault](https://www.vaultproject.io)`,
+                "bp description 3": `Onyxia permet de stocker les informations sensibles de type 
+                    clef d'API dans Vault et de les rendre accessibles dans les services sous forme de variable`,
 
-                "bp title 4": `Customizez l'apparence instance d'Onyxia`,
-                "bp description 4": `Onyxia offre de nombreuse option de personalisations.
+                "bp title 4": `Customizez l'apparence d'Onyxia`,
+                "bp description 4": `Onyxia offre de nombreuses options de personalisation.
                     Modifiez le thème, le lien et le logo du header sans avoir a forker Onyxia. Mais uniquement
-                    en modifiant les paramètre de votre instance.`,
+                    en modifiant les paramètres de votre instance.`,
 
-                "bp title 5": "Un environement pour les travaux platiques",
-                "bp description 5": `Onyxia permet de généré des liens de lancement de service.  
-                    Cette fonctionalité peut être utilise pour crée des catalogue de formation comme [celui là](https://www.sspcloud.fr/formation).`,
+                "bp title 5": "Un environement de formation",
+                "bp description 5": `Onyxia permet de générer des liens de lancement de service.  
+                    Cette fonctionalité peut être utilisée pour créer des catalogues de formation comme [celui-là](https://www.sspcloud.fr/formation).`,
 
                 "bp title 6": "Technologiquement agnostique",
-                "bp description 6": `Avec Onyxia vous n'investisez pas sur une stack technique en particulier.
-                Onyxia permet de rendre accessible nimporte quelle technologie cloud native et ne génére 
+                "bp description 6": `Avec Onyxia vous n'investisez pas sur une stack technique en particulier sauf kubernetes et S3.
+                Onyxia permet de rendre accessible n'importe quelle technologie cloud native et ne génére 
                 donc pas de potentielle dette technique future.`,
 
-                "bp title 7": "Groupes de travails",
-                "bp description 7": `Plusieurs utilisateurs peuvent colaborer sur un même projet,
+                "bp title 7": "Projets",
+                "bp description 7": `Plusieurs utilisateurs peuvent collaborer sur un même projet,
                     partager des services et un même bucket s3`,
 
                 "bp title 8": "Open source",
