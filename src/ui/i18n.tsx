@@ -157,7 +157,7 @@ export const {
 
                 "bp title 3": `Intégration avec [HashiCorp Vault](https://www.vaultproject.io)`,
                 "bp description 3": `Onyxia permet de stocker les informations sensibles de type 
-                    clés d'API dans Vault et de les rendre accessibles dans les services sous forme de variable`,
+                    clés d'API dans Vault et de les rendre accessibles dans les services sous forme de variable.`,
 
                 "bp title 4": `Personnalisez l'apparence d'Onyxia`,
                 "bp description 4": `Onyxia offre de nombreuses options de personalisation.
