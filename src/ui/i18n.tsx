@@ -57,7 +57,7 @@ export const {
                 "article 2 title": `Services configurations`,
                 "article 2 body": `Onyxia automatically generates a form from the Helm chart that enables users to configure their services.
                     As an Onyxia administrator you can also decide to pre fill some values based on what is known about the user.  
-                    This mechanism enables for example to inject the correct environment variables so that the user can easily connect to its S3 bucket within his service.`,
+                    This mechanism enables for example to inject the correct environment variables so that the user can easily connect to his S3 bucket within his service.`,
 
                 "article 3 title": `Versatile and secure authentication`,
                 "article 3 body": `Onyxia is distributed with a Keycloak login theme. 
