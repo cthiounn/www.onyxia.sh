@@ -48,7 +48,7 @@ export const {
                     if they are not well versed into computing.  
                     At its core Onyxia is a web UI that turns a helm chart repo into a catalog of services.
                     Onyxia enables to provide your data scientists with a nice and intuitive interface for launching [containers](https://wwww.docker.com/) like [Spark, RStudio or Jupyter](https://datalab/sppcloud.fr/catalog).  
-                    On top of that Onyxia features a tight S3 integration via [MinIO](https://min.io/) or [AWS](https://aws.amazon.com/s3/).`,
+                    On top of that Onyxia features a tight S3 integration via [MinIO](https://min.io/) or [Amazon S3](https://aws.amazon.com/s3/).`,
                 "install now": "Access the deployment guide",
                 "article 1 title": "Build your catalog of services or use the builtin one",
                 "article 1 body": `Build a custom offer of services by setting up 
