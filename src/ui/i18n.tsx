@@ -134,7 +134,7 @@ export const {
                 "article 1 body": `Construisez une offre de service sur mesure pour votre métier en metant en place 
                 votre propre dépôt de chart Helm ou réutilisez les nôtres: [interactive-services](https://github.com/InseeFrLab/helm-charts-interactive-services), [databases](https://github.com/InseeFrLab/helm-charts-databases), [automation](https://github.com/InseeFrLab/helm-charts-automation), ...`,
                 "article 2 title": `Configuration des services`,
-                "article 2 body": `Onyxia génére automatiquement un formulaire qui permet aux utilisateurs
+                "article 2 body": `Onyxia génère automatiquement un formulaire qui permet aux utilisateurs
                 d'écraser les valeurs pas défault des \`values.yaml\` de vos charts Helm.
                 Onyxia vous permet également de préciser des valeurs a préremplire spécifiquement
                 pour l'utilisateur en question.
