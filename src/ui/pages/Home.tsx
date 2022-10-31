@@ -264,4 +264,8 @@ export const { i18n } = declareComponentKeys<
     | "bp description 5"
     | "bp title 6"
     | "bp description 6"
+    | "bp title 7"
+    | "bp description 7"
+    | "bp title 8"
+    | "bp description 8"
 >()({ Home });
