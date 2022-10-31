@@ -136,17 +136,6 @@ export const App = memo(() => {
                         bottomDivContent={`[GitHub](${githubRepoUrl}) - [Documentation](${docsUrl}) - [${t(
                             "edit this website",
                         )}](https://github.com/InseeFrLab/www.onyxia.sh/blob/main/src/ui/i18n.tsx)`}
-                        links={[
-                            {
-                                "href": `${githubRepoUrl}/blob/main/LICENSE`,
-                                "label": (
-                                    <img
-                                        src="https://img.shields.io/npm/l/i18nifty"
-                                        alt=""
-                                    />
-                                ),
-                            },
-                        ]}
                     />
                 }
             />

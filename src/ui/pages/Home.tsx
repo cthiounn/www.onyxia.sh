@@ -172,6 +172,16 @@ export function Home() {
                         "title": t("bp title 6"),
                         "description": t("bp description 6"),
                     },
+                    /*
+                    {
+                        "title": t("bp title 7"),
+                        "description": t("bp description 7"),
+                    },
+                    {
+                        "title": t("bp title 8"),
+                        "description": t("bp description 8"),
+                    },
+                    */
                 ]}
             />
         </>

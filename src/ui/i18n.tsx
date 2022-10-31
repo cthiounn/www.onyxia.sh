@@ -44,13 +44,13 @@ export const {
                 "subTitle":
                     "Pool computing resources and provide a state of the art work environnement to your data scientists without relying on big tech closed-source software.",
                 "what is onyxia title": "What's Onyxia?",
-                "what is onyxia body": `
-                    Onyxia enables data scientist to work with modern could based technologies event if they are not well verse into computing.  
+                "what is onyxia body": `Onyxia enables data scientist to work with modern could based technologies event 
+                    if they are not well verse into computing.  
                     A it's core Onyxia is a web UI that turns a helm chart repo into a catalog of services.
                     Onyxia enables to provide your data scientist with a nice and intuitive interface for launching [containers](https://wwww.docker.com/) like [Spark, RStudio or Jupyter](https://datalab/sppcloud.fr/catalog).  
                     On top of that Onyxia features a tight S3 integration via [MINIO](https://min.io/) or [AWS](https://aws.amazon.com/s3/).`,
                 "install now": "Access the deployment guide",
-                "article 1 title": "[Build your catalog](https://docs.onyxia.sh/contributing/catalog-of-services) of service or use the ones that comes builtins",
+                "article 1 title": "Build your catalog of service or use the ones that comes builtins",
                 "article 1 body": `Build a custom offer of service by setting up 
                     own depot of chart Helm. It's all [well documented](https://docs.onyxia.sh/contributing/catalog-of-services).  
                     You can also opt for using [the default catalog](https://datalab.sspcloud.fr/catalog).`,
@@ -123,8 +123,8 @@ export const {
                 "subTitle":
                     "Fournissez un environnement de travail à l'état de l'art à vos data scientists sans dépendre de logiciels propriétaires.",
                 "what is onyxia title": "Qu'est-ce qu'Onyxia?",
-                "what is onyxia body": `
-                    Onyxia est une application web qui permet aux datacientis d'acceder à un environement de travail a l'état 
+                "what is onyxia body": `Onyxia est une application web qui permet aux 
+                    datacientis d'acceder à un environement de travail a l'état 
                     de l'art même sans être très pointu en informatique.
                     Essenciellement, Onyxia trensforme un repo de chart [Helm](https://helm.sh) en un catalogue de services
                     configurable.  
