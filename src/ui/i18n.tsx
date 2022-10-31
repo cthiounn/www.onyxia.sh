@@ -71,7 +71,7 @@ export const {
 
                 "bp title 2": `S3 file explorer`,
                 "bp description 2": `Onyxia enables to drag and drop files to be uploaded on S3. The files 
-                    are then readily accessible within the services`,
+                    are then readily accessible within the services.`,
 
                 "bp title 3": `[HashiCorp Vault](https://www.vaultproject.io) integration`,
                 "bp description 3": `Onyxia provides a safe storage space for storing critical information like API keys.  
@@ -79,7 +79,7 @@ export const {
 
                 "bp title 4": `Apply your own branding`,
                 "bp description 4": `Onyxia enables to customize the default look and information displayed there and there 
-                    without having to change to fork the code. Look for example how different looks [this instance from Etalab](https://sill.etalab.gouv.fr/software)`,
+                    without having to change to fork the code. Look for example how different looks [this instance from Etalab](https://sill.etalab.gouv.fr/software).`,
 
                 "bp title 5": "Great for education ",
                 "bp description 5": `Onyxia enables you to generate links that start a service just by clicking them.  
@@ -87,7 +87,7 @@ export const {
 
                 "bp title 6": "Technology agnostic",
                 "bp description 6": `By making the choice of Onyxia you aren't gambling on one specific stack being the future of Data science.  
-                Onyxia lets you leverage any technology as long as it is cloud native (containerized using HTTP)`,
+                Onyxia lets you leverage any technology as long as it is cloud native (containerized using HTTP).`,
 
                 "bp title 7": "Work groups",
                 "bp description 7": "Multiple users can collaborate on a project, share services and S3 buckets.",
