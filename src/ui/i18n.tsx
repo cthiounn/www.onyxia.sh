@@ -124,7 +124,7 @@ export const {
                     "Fournissez un environnement de travail à l'état de l'art à vos data scientists sans dépendre de logiciels propriétaires.",
                 "what is onyxia title": "Qu'est-ce qu'Onyxia?",
                 "what is onyxia body": `Onyxia est une application web qui permet aux 
-                    data cientists d'accéder à un environnement de travail a l'état 
+                    data scientists d'accéder à un environnement de travail a l'état 
                     de l'art même sans être très pointu en informatique.
                     Essentiellement, Onyxia transforme un repo de chart [Helm](https://helm.sh) en un catalogue de services
                     configurables et configurés automatiquement.  
