@@ -79,7 +79,7 @@ export const {
 
                 "bp title 4": `Apply your own branding`,
                 "bp description 4": `Onyxia enables to customize the default look and information displayed there and there 
-                    without having to change to fork the code. Look for example how different looks [this instance from Etalab](https://sill.etalab.gouv.fr/software).`,
+                    without having to change to fork the code. Look for example how different looks [this instance from Etalab](https://sill-demo.etalab.gouv.fr/catalog/helm-charts-sill).`,
 
                 "bp title 5": "Great for education ",
                 "bp description 5": `Onyxia enables you to generate links that start a service just by clicking them.  
@@ -162,7 +162,7 @@ export const {
                 "bp title 4": `Personnalisez l'apparence d'Onyxia`,
                 "bp description 4": `Onyxia offre de nombreuses options de personalisation.
                     Modifiez le thème, le lien et le logo de l'entête sans avoir à toucher au code source d'Onyxia. Mais uniquement
-                    en modifiant les paramètres de votre instance.`,
+                    en modifiant les paramètres de votre instance. [Example du customization](https://sill-demo.etalab.gouv.fr/catalog/helm-charts-sill).`,
 
                 "bp title 5": "Un environement de formation",
                 "bp description 5": `Onyxia permet de générer des liens de lancement de service.  
