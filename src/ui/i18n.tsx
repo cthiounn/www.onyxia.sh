@@ -34,7 +34,7 @@ export const {
                         This software is the result of a collaboration between the <MuiLink href={inseeUrl}>INSEE</MuiLink> and <MuiLink href={etalabUrl}>Etalab</MuiLink>
                     </>
                 ),
-                "pricing": "Pricing",
+                "pricing": "FLOSS",
                 "demo instance": "Demo instance",
                 "ok": "Ok",
                 "edit this website": "Edit this website",
@@ -113,7 +113,7 @@ export const {
                         Ce logiciel est issu d'une collaboration entre l'<MuiLink href={inseeUrl}>INSEE</MuiLink> et <MuiLink href={etalabUrl}>Etalab</MuiLink>
                     </>
                 ),
-                "pricing": "Prix",
+                "pricing": "FLOSS",
                 "demo instance": "Instance de démonstration",
                 "ok": "D'accord",
                 "edit this website": "Modifier ce site",
