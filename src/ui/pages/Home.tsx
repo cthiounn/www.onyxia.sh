@@ -62,6 +62,8 @@ export function Home() {
                 title={t("Onyxia in action")}
                 src="https://www.youtube.com/embed/2aewcmK8kmk"
                 hasAnimation={true}
+                width={744}
+                height={419}
             />
             <GlArticle
                 title={t("what is onyxia title")}
