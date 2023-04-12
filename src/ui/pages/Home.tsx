@@ -22,6 +22,7 @@ import { ReactComponent as TileSvg } from "../assets/svg/tile.svg";
 import keycloakifyDemoMp4Url from "ui/assets/video/Keycloakify_demo.mp4";
 import keycloakifyDemoWebmUrl from "ui/assets/video/Keycloakify_demo.webm";
 import { useLang } from "ui/i18n";
+import { GlYoutubeVideoSection } from "gitlanding/GlYoutubeVideoSection";
 
 export const githubRepoUrl = "https://github.com/InseeFrLab/onyxia-web";
 export const docsUrl = `https://docs.onyxia.sh`;
@@ -57,6 +58,11 @@ export function Home() {
                     "textWrapper": classes.textWrapper,
                 }}
             />
+            <GlYoutubeVideoSection
+                title={t("Onyxia in action")}
+                src="https://www.youtube.com/embed/2aewcmK8kmk"
+                hasAnimation={true}
+            />
             <GlArticle
                 title={t("what is onyxia title")}
                 body={t("what is onyxia body")}
@@ -64,8 +70,8 @@ export function Home() {
                 buttonLink={{ "href": docsUrl }}
                 illustration={{
                     "type": "image",
-                    "src": (()=>{
-                        switch(lang){
+                    "src": (() => {
+                        switch (lang) {
                             case "en": return theme.isDarkModeEnabled ? onyxiaUXDarkENUrl : onyxiaUXLightENUrl;
                             case "fr": return theme.isDarkModeEnabled ? onyxiaUXDarkFRUrl : onyxiaUXLightFRUrl;
                         }
@@ -171,7 +177,7 @@ export function Home() {
                     {
                         "title": t("bp title 6"),
                         "description": t("bp description 6"),
-                    },
+                    }
                     /*
                     {
                         "title": t("bp title 7"),
@@ -252,6 +258,7 @@ const useStyles = makeStyles({ "name": { Home } })(theme => ({
 
 export const { i18n } = declareComponentKeys<
     | "orange title"
+    | "Onyxia in action"
     | "subTitle"
     | "what is onyxia title"
     | "what is onyxia body"
@@ -278,4 +285,5 @@ export const { i18n } = declareComponentKeys<
     | "bp description 7"
     | "bp title 8"
     | "bp description 8"
+
 >()({ Home });

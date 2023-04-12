@@ -41,6 +41,7 @@ export const {
             },
             "Home": {
                 "orange title": "The modern datascience stack made accessible",
+                "Onyxia in action": "Onyxia in action",
                 "subTitle":
                     "Pool computing resources and provide a state of the art work environment to your data scientists without relying on big tech closed-source software.",
                 "what is onyxia title": "What is Onyxia?",
@@ -93,7 +94,7 @@ export const {
                 "bp description 7": "Multiple users can collaborate on a project, share services and S3 buckets.",
 
                 "bp title 8": "Open source",
-                "bp description 8": `Onyxia is fully open source and well documented. Feel free to [get involved in the development](https://docs.onyxia.sh/contributing)!`
+                "bp description 8": `Onyxia is fully open source and well documented. Feel free to [get involved in the development](https://docs.onyxia.sh/contributing)!`,
                 
             },
             "FourOhFour": {
@@ -120,6 +121,7 @@ export const {
             },
             "Home": {
                 "orange title": "La stack data science moderne rendue accessible",
+                "Onyxia in action": "Onyxia en action",
                 "subTitle":
                     "Fournissez un environnement de travail à l'état de l'art à vos data scientists sans dépendre de logiciels propriétaires.",
                 "what is onyxia title": "Qu'est-ce qu'Onyxia?",
