@@ -105,7 +105,7 @@ export const App = memo(() => {
                                 "href": "#",
                             },
                             {
-                                "label": t("demo instance"),
+                                "label": t("our instance"),
                                 "href": "https://datalab.sspcloud.fr/catalog",
                             },
                         ]}
@@ -150,7 +150,7 @@ export const { i18n } = declareComponentKeys<
     | "pricing"
     | { K: "it is libre software dialog body"; P: { licenseUrl: string, inseeUrl: string; etalabUrl: string; }; R: JSX.Element }
     | "it is libre software dialog title"
-    | "demo instance"
+    | "our instance"
     | "ok"
     | "edit this website"
 >()({ App });

@@ -16,7 +16,7 @@ import catalogMp4Url from "ui/assets/video/catalog.mp4";
 import catalogWebmUrl from "ui/assets/video/catalog.webm";
 import launcherMp4Url from "ui/assets/video/launcher.mp4";
 import launcherWebmUrl from "ui/assets/video/launcher.webm";
-import heroImageUrl from "ui/assets/img/hero.png";
+import dragoonSvgUrl from "ui/assets/svg/Dragoon.svg";
 import { GlCheckList } from "gitlanding/GlCheckList";
 import { ReactComponent as TileSvg } from "../assets/svg/tile.svg";
 import keycloakifyDemoMp4Url from "ui/assets/video/Keycloakify_demo.mp4";
@@ -48,7 +48,7 @@ export function Home() {
                 subTitle={t("subTitle")}
                 illustration={{
                     "type": "image",
-                    "src": heroImageUrl,
+                    "src": dragoonSvgUrl,
                     "hasShadow": false,
                 }}
                 hasLinkToSectionBellow={true}

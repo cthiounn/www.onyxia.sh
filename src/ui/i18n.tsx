@@ -35,7 +35,7 @@ export const {
                     </>
                 ),
                 "pricing": "FLOSS",
-                "demo instance": "Demo instance",
+                "our instance": "Our instance",
                 "ok": "Ok",
                 "edit this website": "Edit this website",
             },
@@ -115,7 +115,7 @@ export const {
                     </>
                 ),
                 "pricing": "FLOSS",
-                "demo instance": "Instance de démonstration",
+                "our instance": "Notre instance",
                 "ok": "D'accord",
                 "edit this website": "Modifier ce site",
             },
