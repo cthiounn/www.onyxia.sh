@@ -60,7 +60,7 @@ export function Home() {
             />
             <GlYoutubeVideoSection
                 title={t("Onyxia in action")}
-                src="https://www.youtube.com/embed/2aewcmK8kmk"
+                src="https://www.youtube.com/embed/FvpNfVrxBFM"
                 hasAnimation={true}
             />
             <GlArticle
