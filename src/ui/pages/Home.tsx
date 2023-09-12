@@ -4,7 +4,7 @@ import { GlHero } from "gitlanding/GlHero";
 import { GlHeroText } from "gitlanding/GlHero/GlHeroText";
 import { Text } from "ui/theme";
 import { useTranslation } from "ui/i18n";
-import { makeStyles } from "ui/theme";
+import { tss } from "ui/theme";
 import { breakpointsValues } from "onyxia-ui";
 import { GlArticle } from "gitlanding/GlArticle";
 import onyxiaUXDarkENUrl from "ui/assets/img/OnyxiaUXDarkEN.png";
@@ -194,67 +194,69 @@ export function Home() {
     );
 }
 
-const useStyles = makeStyles({ "name": { Home } })(theme => ({
-    "title2": {
-        "color": theme.colors.useCases.typography.textFocus,
-        "fontStyle": "italic",
-    },
-    "subtitle": {
-        "color": theme.colors.useCases.typography.textPrimary,
-    },
-    "heroIllustrationWrapper": {
-        ...(() => {
-            if (theme.windowInnerWidth >= breakpointsValues.lg) {
-                return {
-                    "paddingRight": 30,
-                    "paddingLeft": 30,
-                };
-            }
-
-            return {};
-        })(),
-        "maxWidth": 700,
-    },
-    "articleImage": {
-        "width": (() => {
-            if (theme.windowInnerWidth > 650) {
-                return 700;
-            }
-
-            return undefined;
-        })(),
-    },
-    "articleVideo": {
-        "width": (() => {
-            if (theme.windowInnerWidth > 650) {
-                return 700;
-            }
-
-            return undefined;
-        })(),
-        "borderRadius": 10,
-    },
-
-    "textWrapper": {
-        ...(() => {
-            if (theme.windowInnerWidth >= breakpointsValues.lg) {
-                return {
-                    "marginLeft": 70,
-                };
-            }
-
-            return {};
-        })(),
-    },
-    "checkListRoot": {
-        //...theme.spacing.topBottom("margin", 16),
-    },
-    "checkIcon": {
-        "& g": {
-            "fill": theme.colors.palette.focus.main,
+const useStyles = tss
+    .withName({ Home })
+    .create(({ theme }) => ({
+        "title2": {
+            "color": theme.colors.useCases.typography.textFocus,
+            "fontStyle": "italic",
         },
-    },
-}));
+        "subtitle": {
+            "color": theme.colors.useCases.typography.textPrimary,
+        },
+        "heroIllustrationWrapper": {
+            ...(() => {
+                if (theme.windowInnerWidth >= breakpointsValues.lg) {
+                    return {
+                        "paddingRight": 30,
+                        "paddingLeft": 30,
+                    };
+                }
+
+                return {};
+            })(),
+            "maxWidth": 700,
+        },
+        "articleImage": {
+            "width": (() => {
+                if (theme.windowInnerWidth > 650) {
+                    return 700;
+                }
+
+                return undefined;
+            })(),
+        },
+        "articleVideo": {
+            "width": (() => {
+                if (theme.windowInnerWidth > 650) {
+                    return 700;
+                }
+
+                return undefined;
+            })(),
+            "borderRadius": 10,
+        },
+
+        "textWrapper": {
+            ...(() => {
+                if (theme.windowInnerWidth >= breakpointsValues.lg) {
+                    return {
+                        "marginLeft": 70,
+                    };
+                }
+
+                return {};
+            })(),
+        },
+        "checkListRoot": {
+            //...theme.spacing.topBottom("margin", 16),
+        },
+        "checkIcon": {
+            "& g": {
+                "fill": theme.colors.palette.focus.main,
+            },
+        },
+    }));
 
 export const { i18n } = declareComponentKeys<
     | "orange title"

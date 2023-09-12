@@ -1,24 +1,21 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import type { Meta, Story } from "@storybook/react";
 import type { ArgType } from "@storybook/addons";
-import { useEffect, useCallback, useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { symToStr } from "tsafe/symToStr";
 import {
     useIsDarkModeEnabled,
-    chromeFontSizesFactors,
     breakpointsValues,
-    useWindowInnerSize,
 } from "onyxia-ui";
-import type { ThemeProviderProps, ChromeFontSize } from "onyxia-ui";
 import { ThemeProvider, Text, useStyles } from "ui/theme";
 import { id } from "tsafe/id";
 import "onyxia-ui/assets/fonts/WorkSans/font.css";
 import { GlobalStyles } from "tss-react/compat";
-import { objectKeys } from "tsafe/objectKeys";
 import { RouteProvider } from "ui/router";
 import { fallbackLanguage, languages } from "ui/i18n";
 import type { Language } from "ui/i18n";
 import { useLang } from "ui/i18n";
+import { useWindowInnerSize } from "powerhooks/useWindowInnerSize";
 
 //NOTE: Storybook bug hotfix.
 const propsByTitle = new Map<string, any>();
@@ -77,8 +74,6 @@ export function getStoryFactory<Props>(params: {
         Props & {
             darkMode: boolean;
             containerWidth: number;
-            chromeFontSize: ChromeFontSize;
-            targetWindowInnerWidth: number;
             lang: Language;
         }
     > = templateProps => {
@@ -87,8 +82,6 @@ export function getStoryFactory<Props>(params: {
         const {
             darkMode,
             containerWidth,
-            targetWindowInnerWidth,
-            chromeFontSize,
             lang,
             ...props
         } = Object.assign(
@@ -108,15 +101,6 @@ export function getStoryFactory<Props>(params: {
             setLang(lang);
         }, [lang]);
 
-        const getViewPortConfig = useCallback<
-            NonNullable<ThemeProviderProps["getViewPortConfig"]>
-        >(
-            ({ windowInnerWidth }) => ({
-                "targetBrowserFontSizeFactor": chromeFontSizesFactors[chromeFontSize],
-                "targetWindowInnerWidth": targetWindowInnerWidth || windowInnerWidth,
-            }),
-            [targetWindowInnerWidth, chromeFontSize],
-        );
 
         const { theme } = useStyles();
 
@@ -135,7 +119,7 @@ export function getStoryFactory<Props>(params: {
                         }}
                     />
                 }
-                <ThemeProvider getViewPortConfig={getViewPortConfig}>
+                <ThemeProvider>
                     <ScreenSize />
                     <div
                         style={{
@@ -183,18 +167,6 @@ export function getStoryFactory<Props>(params: {
                         "max": 1920,
                         "step": 1,
                     },
-                },
-                "targetWindowInnerWidth": {
-                    "control": {
-                        "type": "range",
-                        "min": 0,
-                        "max": 2560,
-                        "step": 10,
-                    },
-                },
-                "chromeFontSize": {
-                    "options": objectKeys(chromeFontSizesFactors),
-                    "control": { "type": "select" },
                 },
                 "lang": {
                     "options": languages,

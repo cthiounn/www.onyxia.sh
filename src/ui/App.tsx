@@ -6,7 +6,7 @@ import { useSplashScreen } from "onyxia-ui";
 import { Home, githubRepoUrl, docsUrl } from "./pages/Home";
 import { GlHeader } from "gitlanding/GlHeader";
 import { useTranslation } from "ui/i18n";
-import { makeStyles, Text } from "ui/theme";
+import { tss, Text } from "ui/theme";
 import { ReactComponent as OnyxiaLogoSvg } from "ui/assets/svg/OnyxiaLogo.svg";
 import { useConstCallback } from "powerhooks/useConstCallback";
 import { routes } from "ui/router";
@@ -157,7 +157,9 @@ export const { i18n } = declareComponentKeys<
     | "edit this website"
 >()({ App });
 
-const useStyles = makeStyles({ "name": { App } })(theme => ({
+const useStyles = tss
+    .withName({ App })
+    .create(({ theme })=>({
     "headerTitleWrapper": {
         "display": "flex",
         "cursor": "pointer",
