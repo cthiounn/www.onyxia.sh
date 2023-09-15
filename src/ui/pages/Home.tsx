@@ -151,6 +151,24 @@ export function Home() {
                 hasAnimation={true}
                 illustrationPosition="left"
             />
+            <GlSectionDivider />
+            <GlSlider
+                title={t("They have their own Onyxia Datalab")}
+                autoPlayTimeInterval={4}
+                classes={{
+                    "container": classes.glSliderContainer,
+                    "sliderWrapper": classes.glSliderWrapper,
+                }}
+                slides={[
+                    <GlReviewSlide
+                        logoUrl={logoInseePngUrl}
+                        logoFill="white"
+                        descriptionMd={t("Review slide insee description")}
+                        signature={t("Review slide insee signature")}
+                    />,
+                ]}
+            />
+            <GlSectionDivider />
             <GlCheckList
                 hasAnimation={true}
                 Icon={TileSvg}
@@ -195,29 +213,6 @@ export function Home() {
                     */
                 ]}
             />
-
-            <GlSectionDivider />
-
-            <GlSlider
-                title={t("They have their own Onyxia Datalab")}
-                autoPlayTimeInterval={4}
-                classes={{
-                    "container": classes.glSliderContainer,
-                    "sliderWrapper": classes.glSliderWrapper,
-                }}
-                slides={[
-                    <GlReviewSlide
-                        logoUrl={logoInseePngUrl}
-                        logoFill="white"
-                        descriptionMd={t("Review slide insee description")}
-                        signature={t("Review slide insee signature")}
-                    />,
-                ]}
-            />
-
-
-
-
 
         </>
     );

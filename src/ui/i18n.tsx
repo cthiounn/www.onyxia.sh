@@ -194,11 +194,11 @@ export const {
                     Sentez-vous libre de [participer a son développement](https://docs.onyxia.sh/contributing)!`,
                 
 
-                "They have their own Onyxia Datalab": "Ils on leur Datalab Onyxia",
+                "They have their own Onyxia Datalab": "Ils ont leur Datalab Onyxia",
                 "Review slide insee description": `La véritable innovation c'est de rendre simple quelque chose de quasi impossible.  
-                C'est l essence même d Onyxia qui met à la portée du plus grand nombre la mise en place à la demande d environnements 
-                sophistiqués pour la Datascience. Je suis extrêmement fier que l INSEE ait lancé le développement de ce logiciel et porte 
-                toujours des contributeurs majeurs mais aussi enthousiaste qu une communauté se mette en marche pour enrichir collectivement 
+                C'est l'essence même d Onyxia qui met à la portée du plus grand nombre la mise en place à la demande d'environnements 
+                sophistiqués pour la Datascience. Je suis extrêmement fier que l'INSEE ait lancé le développement de ce logiciel et porte 
+                toujours des contributeurs majeurs mais aussi enthousiaste qu'une communauté se mette en marche pour enrichir collectivement 
                 ses fonctionnalités.`,
 
                 "Review slide insee signature": "Jean-Séverin Lair, DSI de l'INSEE"
