@@ -7276,7 +7276,7 @@ evp_bytestokey@^1.0.0, evp_bytestokey@^1.0.3:
     md5.js "^1.3.4"
     safe-buffer "^5.1.1"
 
-evt@^2.5.0, evt@^2.5.2:
+evt@^2.5.2:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/evt/-/evt-2.5.2.tgz#fe2c86657de488fd873195daae35323b96daefb2"
   integrity sha512-N8+A+VJRMPDIOz7KDctin7JSMPIvS1edLSDSgH51OGN6MGlAdthZ6pSztRBe1dxvNb0CvlzLKu9kRK2zYiWukw==
@@ -8537,12 +8537,12 @@ human-signals@^2.1.0:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-2.1.0.tgz#dc91fcba42e4d06e4abaed33b3e7a3c02f514ea0"
   integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
 
-i18nifty@^1.6.1:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/i18nifty/-/i18nifty-1.6.1.tgz#5c30ea51a84e816a7f3c1c298f08bb9e5feb9c24"
-  integrity sha512-J4EgG6CNMtLbOqMtHBa82ZaxvQLNUBHXlmjtYtW29y49J6E59BpsvKtxoiz4xiefk6dK6YoT2oSjh0TX5Vyt3Q==
+i18nifty@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/i18nifty/-/i18nifty-2.0.0.tgz#d30db54cf214e44a60115a7053e3af1c12d13660"
+  integrity sha512-r4dw2NB7+FAG9+/RwhwaJO9O6yDnEMIkuhC5Xfi0URIh8tVDyJsxNmT1CiasGEZ0O2HSSwY09O4EkNNBrXQFYg==
   dependencies:
-    powerhooks "^0.27.0"
+    powerhooks "^1.0.1"
     tsafe "^1.6.4"
 
 iconv-lite@0.4.24:
@@ -12005,20 +12005,19 @@ postcss@^8.3.5, postcss@^8.4.17, postcss@^8.4.4, postcss@^8.4.7:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-powerhooks@^0.27.0:
-  version "0.27.2"
-  resolved "https://registry.yarnpkg.com/powerhooks/-/powerhooks-0.27.2.tgz#2b7dbf4d206a209474231c50c34a58e4e8800950"
-  integrity sha512-8XNvMSR/JwxFykzbmijrnQ66INBmdgAQPPN0FqSHIGv8s/QSld6o6vko27H16R1S7S4FbsVrykJ0aIKy7H687w==
-  dependencies:
-    evt "^2.5.0"
-    memoizee "^0.4.15"
-    resize-observer-polyfill "^1.5.1"
-    tsafe "^1.6.4"
-
 powerhooks@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/powerhooks/-/powerhooks-1.0.0.tgz#d569ce581b36b206ce5201f5f20b6519417bc118"
   integrity sha512-lQmCDyQHSlUqDbCVUOJDPTSUUKROozDtioIGYfYTO2br9SMYSliLCVMN2GgD5HeCLo93fpYAUtD9a/bVnfpLDg==
+  dependencies:
+    evt "^2.5.2"
+    memoizee "^0.4.15"
+    tsafe "^1.6.4"
+
+powerhooks@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/powerhooks/-/powerhooks-1.0.1.tgz#23973fa8b6a81cbcb3b7107c147d2f294f7a8d7a"
+  integrity sha512-HvB3yKK3uF1P5i+GIZYebRPh6y9FRsrG0VvbQ2b9k/FUFxjMZ54sx2P+pRtsMyhChK5/nb98jdwovRJsqTXpGQ==
   dependencies:
     evt "^2.5.2"
     memoizee "^0.4.15"
@@ -12916,11 +12915,6 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
-
-resize-observer-polyfill@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
-  integrity sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
 
 resolve-cwd@^3.0.0:
   version "3.0.0"

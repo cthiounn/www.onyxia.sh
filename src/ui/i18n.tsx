@@ -95,7 +95,16 @@ export const {
 
                 "bp title 8": "Open source",
                 "bp description 8": `Onyxia is fully open source and well documented. Feel free to [get involved in the development](https://docs.onyxia.sh/contributing)!`,
-                
+
+                "They have their own Onyxia Datalab": "They have an Onyxia Datalab",
+                "Review slide insee description": `True innovation is making something almost impossible simple.  
+                This is the very essence of Onyxia, which makes it possible for a wide range of people to set up sophisticated data science 
+                environments on demand.  
+                I am extremely proud that INSEE initiated the development of this software and continues 
+                to be a major contributor, but also excited that a community is coming together to collectively enrich its features.`,
+                "Review slide insee signature": "Jean-Séverin Lair, CIO of INSEE"
+
+
             },
             "FourOhFour": {
                 "not found": "Page not found",
@@ -183,6 +192,17 @@ export const {
                 "bp description 8": `Onyxia est un logiciel libre, 
                     [bien documenté](https://docs.onyxia.sh/) et sous [license MIT](https://github.com/InseeFrLab/onyxia-web/blob/main/LICENSE).
                     Sentez-vous libre de [participer a son développement](https://docs.onyxia.sh/contributing)!`,
+                
+
+                "They have their own Onyxia Datalab": "Ils on leur Datalab Onyxia",
+                "Review slide insee description": `La véritable innovation c'est de rendre simple quelque chose de quasi impossible.  
+                C'est l essence même d Onyxia qui met à la portée du plus grand nombre la mise en place à la demande d environnements 
+                sophistiqués pour la Datascience. Je suis extrêmement fier que l INSEE ait lancé le développement de ce logiciel et porte 
+                toujours des contributeurs majeurs mais aussi enthousiaste qu une communauté se mette en marche pour enrichir collectivement 
+                ses fonctionnalités.`,
+
+                "Review slide insee signature": "Jean-Séverin Lair, DSI de l'INSEE"
+
             },
             "FourOhFour": {
                 "not found": "Page non trouvée",

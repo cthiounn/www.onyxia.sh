@@ -11,6 +11,7 @@ import onyxiaUXDarkENUrl from "ui/assets/img/OnyxiaUXDarkEN.png";
 import onyxiaUXDarkFRUrl from "ui/assets/img/OnyxiaUXDarkFR.png";
 import onyxiaUXLightENUrl from "ui/assets/img/OnyxiaUXLightEN.png";
 import onyxiaUXLightFRUrl from "ui/assets/img/OnyxiaUXLightFR.png";
+import logoInseePngUrl from "ui/assets/svg/Logo_Insee.png";
 import { declareComponentKeys } from "i18nifty";
 import catalogMp4Url from "ui/assets/video/catalog.mp4";
 import catalogWebmUrl from "ui/assets/video/catalog.webm";
@@ -23,6 +24,10 @@ import keycloakifyDemoMp4Url from "ui/assets/video/Keycloakify_demo.mp4";
 import keycloakifyDemoWebmUrl from "ui/assets/video/Keycloakify_demo.webm";
 import { useLang } from "ui/i18n";
 import { GlYoutubeVideoSection } from "gitlanding/GlYoutubeVideoSection";
+import { GlSlider } from "gitlanding/GlSlider";
+import { GlSectionDivider } from "gitlanding/GlSectionDivider";
+import { GlReviewSlide } from "gitlanding/GlReviewSlide";
+
 
 export const githubRepoUrl = "https://github.com/InseeFrLab/onyxia-web";
 export const docsUrl = `https://docs.onyxia.sh`;
@@ -190,6 +195,30 @@ export function Home() {
                     */
                 ]}
             />
+
+            <GlSectionDivider />
+
+            <GlSlider
+                title={t("They have their own Onyxia Datalab")}
+                autoPlayTimeInterval={4}
+                classes={{
+                    "container": classes.glSliderContainer,
+                    "sliderWrapper": classes.glSliderWrapper,
+                }}
+                slides={[
+                    <GlReviewSlide
+                        logoUrl={logoInseePngUrl}
+                        logoFill="white"
+                        descriptionMd={t("Review slide insee description")}
+                        signature={t("Review slide insee signature")}
+                    />,
+                ]}
+            />
+
+
+
+
+
         </>
     );
 }
@@ -256,6 +285,15 @@ const useStyles = tss
                 "fill": theme.colors.palette.focus.main,
             },
         },
+        "glSliderContainer": {
+            "maxWidth": 750,
+        },
+        //TODO: Remove once we have more than one testimonial.
+        "glSliderWrapper": {
+            "& .MuiSvgIcon-root": {
+                "display": "none"
+            }
+        }
     }));
 
 export const { i18n } = declareComponentKeys<
@@ -287,5 +325,8 @@ export const { i18n } = declareComponentKeys<
     | "bp description 7"
     | "bp title 8"
     | "bp description 8"
+    | "They have their own Onyxia Datalab"
+    | "Review slide insee description"
+    | "Review slide insee signature"
 
 >()({ Home });
