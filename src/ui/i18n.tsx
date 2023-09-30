@@ -109,7 +109,7 @@ export const {
                 allows ocean forecasters to easily create their own analysis environment by facilitating access to a large panel of on-demand services. 
                 Thus enabling further development of models and data products towards emerging digital twins of the ocean.
                 `,
-                "Review slide Mercator signature": "Quentin GAUDEL, R&D software engineer and System @ Mercator Ocean International",
+                "Review slide Mercator signature": "Chloé Delpont Ramat, Full Stack Dev @ Mercator Ocean International",
                 
                 "Review slide Statistic Norway description": `[Statistics Norway](https://www.ssb.no/en) is thrilled to integrate Onyxia as a key component in our Data platform. 
                 Onyxia's capabilities align well with our mission and add substantial value to our data operations. We wholeheartedly endorse Onyxia and offer our full support for its promotion.`,  
@@ -221,7 +221,7 @@ export const {
                 permet aux prévisionnistes océaniques de créer facilement leur propre environnement d'analyse en facilitant l'accès à un large panel de services à la demande. 
                 Ceci permettant ainsi le développement futur de modèles et de produits de données vers des jumeaux numériques émergents de l'océan.
                 `,
-                "Review slide Mercator signature": "Quentin GAUDEL, ingénieur logiciel R&D et Système @ Mercator Ocean International",
+                "Review slide Mercator signature": "Chloé Delpont Ramat, Full Stack Dev @ Mercator Ocean International",
                 "Review slide Statistic Norway description": `[Statistics Norway](https://www.ssb.no/en) est ravi d'intégrer Onyxia en tant que composant clé de notre plateforme de données. 
                 Les capacités d'Onyxia s'alignent parfaitement avec notre mission et ajoutent une valeur substantielle à nos opérations de données. Nous soutenons 
                 pleinement Onyxia et offrons tout notre soutien pour sa promotion.`,
