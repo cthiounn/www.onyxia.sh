@@ -13,6 +13,7 @@ import onyxiaUXLightENUrl from "ui/assets/img/OnyxiaUXLightEN.png";
 import onyxiaUXLightFRUrl from "ui/assets/img/OnyxiaUXLightFR.png";
 import logoInseePngUrl from "ui/assets/img/Logo_Insee.png";
 import logoMercatorJpgUrl from "ui/assets/img/Logo_Mercator.jpg";
+import logoStatisticNorwayPngUrl from "ui/assets/img/Logo_StatisticNorway.png";
 import { declareComponentKeys } from "i18nifty";
 import catalogMp4Url from "ui/assets/video/catalog.mp4";
 import catalogWebmUrl from "ui/assets/video/catalog.webm";
@@ -172,6 +173,17 @@ export function Home() {
                         signature={t("Review slide insee signature")}
                     />,
                     <GlReviewSlide
+                        logoUrl={logoStatisticNorwayPngUrl}
+                        classes={{
+                            "logo": css({
+                                "minWidth": 300
+                            })
+                        }}
+                        logoFill="white"
+                        descriptionMd={t("Review slide Statistic Norway description")}
+                        signature={t("Review slide Statistic Norway signature")}
+                    />,
+                    <GlReviewSlide
                         logoUrl={logoMercatorJpgUrl}
                         classes={{
                             "logo": css({
@@ -181,7 +193,7 @@ export function Home() {
                         logoFill="white"
                         descriptionMd={t("Review slide Mercator description")}
                         signature={t("Review slide Mercator signature")}
-                    />,
+                    />
                 ]}
             />
             <GlSectionDivider />
@@ -335,4 +347,6 @@ export const { i18n } = declareComponentKeys<
     | "Review slide insee signature"
     | "Review slide Mercator description"
     | "Review slide Mercator signature"
+    | "Review slide Statistic Norway description"
+    | "Review slide Statistic Norway signature"
 >()({ Home });

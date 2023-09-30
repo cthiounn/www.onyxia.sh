@@ -102,7 +102,7 @@ export const {
                 environments on demand.  
                 I am extremely proud that [INSEE](https://www.insee.fr/en) initiated the development of this software and continues 
                 to be a major contributor, but also excited that a community is coming together to collectively enrich its features.`,
-                "Review slide insee signature": "[Jean-Séverin Lair](https://fr.linkedin.com/in/jeanseverinlair), CIO of [INSEE](https://www.insee.fr/en)",
+                "Review slide insee signature": "Jean-Séverin Lair, CIO of INSEE",
 
                 "Review slide Mercator description": `[Mercator Ocean International](https://www.mercator-ocean.eu/) is a non-profit organisation providing ocean science-based 
                 services of general interest focused on the conservation and the sustainable use of the ocean and marine resources. Onyxia datalab 
@@ -111,6 +111,11 @@ export const {
                 `,
                 "Review slide Mercator signature": "Quentin GAUDEL, R&D software engineer and System @ Mercator Ocean International",
                 
+                "Review slide Statistic Norway description": `[Statistics Norway](https://www.ssb.no/en) is thrilled to integrate Onyxia as a key component in our Data platform. 
+                Onyxia's capabilities align well with our mission and add substantial value to our data operations. We wholeheartedly endorse Onyxia and offer our full support for its promotion.`,  
+                
+                "Review slide Statistic Norway signature": "Statistics Norway, the national statistical institute of Norway",
+
 
 
             },
@@ -217,6 +222,12 @@ export const {
                 Ceci permettant ainsi le développement futur de modèles et de produits de données vers des jumeaux numériques émergents de l'océan.
                 `,
                 "Review slide Mercator signature": "Quentin GAUDEL, ingénieur logiciel R&D et Système @ Mercator Ocean International",
+                "Review slide Statistic Norway description": `[Statistics Norway](https://www.ssb.no/en) est ravi d'intégrer Onyxia en tant que composant clé de notre plateforme de données. 
+                Les capacités d'Onyxia s'alignent parfaitement avec notre mission et ajoutent une valeur substantielle à nos opérations de données. Nous soutenons 
+                pleinement Onyxia et offrons tout notre soutien pour sa promotion.`,
+                
+                "Review slide Statistic Norway signature": "Statistics Norway, l'institut national de statistique de Norvège",
+
 
 
             },
