@@ -11,7 +11,8 @@ import onyxiaUXDarkENUrl from "ui/assets/img/OnyxiaUXDarkEN.png";
 import onyxiaUXDarkFRUrl from "ui/assets/img/OnyxiaUXDarkFR.png";
 import onyxiaUXLightENUrl from "ui/assets/img/OnyxiaUXLightEN.png";
 import onyxiaUXLightFRUrl from "ui/assets/img/OnyxiaUXLightFR.png";
-import logoInseePngUrl from "ui/assets/svg/Logo_Insee.png";
+import logoInseePngUrl from "ui/assets/img/Logo_Insee.png";
+import logoMercatorJpgUrl from "ui/assets/img/Logo_Mercator.jpg";
 import { declareComponentKeys } from "i18nifty";
 import catalogMp4Url from "ui/assets/video/catalog.mp4";
 import catalogWebmUrl from "ui/assets/video/catalog.webm";
@@ -36,7 +37,7 @@ Home.routeGroup = createGroup([routes.home]);
 
 export function Home() {
     const { t } = useTranslation({ Home });
-    const { classes, theme } = useStyles();
+    const { classes, theme, css } = useStyles();
     const { lang } = useLang();
 
     return (
@@ -156,15 +157,30 @@ export function Home() {
                 title={t("They have their own Onyxia Datalab")}
                 autoPlayTimeInterval={4}
                 classes={{
-                    "container": classes.glSliderContainer,
-                    "sliderWrapper": classes.glSliderWrapper,
+                    "container": classes.glSliderContainer
                 }}
                 slides={[
                     <GlReviewSlide
                         logoUrl={logoInseePngUrl}
                         logoFill="white"
+                        classes={{
+                            "logo": css({
+                                "minWidth": 100
+                            })
+                        }}
                         descriptionMd={t("Review slide insee description")}
                         signature={t("Review slide insee signature")}
+                    />,
+                    <GlReviewSlide
+                        logoUrl={logoMercatorJpgUrl}
+                        classes={{
+                            "logo": css({
+                                "minWidth": 150
+                            })
+                        }}
+                        logoFill="white"
+                        descriptionMd={t("Review slide Mercator description")}
+                        signature={t("Review slide Mercator signature")}
                     />,
                 ]}
             />
@@ -281,13 +297,7 @@ const useStyles = tss
             },
         },
         "glSliderContainer": {
-            "maxWidth": 750,
-        },
-        //TODO: Remove once we have more than one testimonial.
-        "glSliderWrapper": {
-            "& .MuiSvgIcon-root": {
-                "display": "none"
-            }
+            "maxWidth": 950,
         }
     }));
 
@@ -323,5 +333,6 @@ export const { i18n } = declareComponentKeys<
     | "They have their own Onyxia Datalab"
     | "Review slide insee description"
     | "Review slide insee signature"
-
+    | "Review slide Mercator description"
+    | "Review slide Mercator signature"
 >()({ Home });

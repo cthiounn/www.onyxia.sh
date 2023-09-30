@@ -100,9 +100,17 @@ export const {
                 "Review slide insee description": `True innovation is making something almost impossible simple.  
                 This is the very essence of Onyxia, which makes it possible for a wide range of people to set up sophisticated data science 
                 environments on demand.  
-                I am extremely proud that INSEE initiated the development of this software and continues 
+                I am extremely proud that [INSEE](https://www.insee.fr/en) initiated the development of this software and continues 
                 to be a major contributor, but also excited that a community is coming together to collectively enrich its features.`,
-                "Review slide insee signature": "Jean-Séverin Lair, CIO of INSEE"
+                "Review slide insee signature": "[Jean-Séverin Lair](https://fr.linkedin.com/in/jeanseverinlair), CIO of [INSEE](https://www.insee.fr/en)",
+
+                "Review slide Mercator description": `[Mercator Ocean International](https://www.mercator-ocean.eu/) is a non-profit organisation providing ocean science-based 
+                services of general interest focused on the conservation and the sustainable use of the ocean and marine resources. Onyxia datalab 
+                allows ocean forecasters to easily create their own analysis environment by facilitating access to a large panel of on-demand services. 
+                Thus enabling further development of models and data products towards emerging digital twins of the ocean.
+                `,
+                "Review slide Mercator signature": "Quentin GAUDEL, R&D software engineer and System @ Mercator Ocean International",
+                
 
 
             },
@@ -197,11 +205,19 @@ export const {
                 "They have their own Onyxia Datalab": "Ils ont leur Datalab Onyxia",
                 "Review slide insee description": `La véritable innovation c'est de rendre simple quelque chose de quasi impossible.  
                 C'est l'essence même d Onyxia qui met à la portée du plus grand nombre la mise en place à la demande d'environnements 
-                sophistiqués pour la Datascience. Je suis extrêmement fier que l'INSEE ait lancé le développement de ce logiciel et porte 
+                sophistiqués pour la Datascience. Je suis extrêmement fier que l'[Insee](https://www.insee.fr/fr) ait lancé le développement de ce logiciel et porte 
                 toujours des contributeurs majeurs mais aussi enthousiaste qu'une communauté se mette en marche pour enrichir collectivement 
                 ses fonctionnalités.`,
 
-                "Review slide insee signature": "Jean-Séverin Lair, DSI de l'INSEE"
+                "Review slide insee signature": "Jean-Séverin Lair, DSI de l'Insee",
+
+                "Review slide Mercator description": `[Mercator Ocean International](https://www.mercator-ocean.eu/) est une organisation à but non lucratif qui fournit des 
+                services basés sur la science océanique d'intérêt général, axés sur la conservation et l'utilisation durable de l'océan et des ressources marines. Onyxia datalab 
+                permet aux prévisionnistes océaniques de créer facilement leur propre environnement d'analyse en facilitant l'accès à un large panel de services à la demande. 
+                Ceci permettant ainsi le développement futur de modèles et de produits de données vers des jumeaux numériques émergents de l'océan.
+                `,
+                "Review slide Mercator signature": "Quentin GAUDEL, ingénieur logiciel R&D et Système @ Mercator Ocean International",
+
 
             },
             "FourOhFour": {
