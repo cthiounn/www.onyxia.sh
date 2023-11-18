@@ -188,7 +188,7 @@ export const {
                     Modifiez le thème, le lien et le logo de l'entête sans avoir à toucher au code source d'Onyxia. Mais uniquement
                     en modifiant les paramètres de votre instance. [Example du customization](https://sill-demo.etalab.gouv.fr/catalog/helm-charts-sill).`,
 
-                "bp title 5": "Un environement de formation",
+                "bp title 5": "Un environnement de formation",
                 "bp description 5": `Onyxia permet de générer des liens de lancement de service.  
                     Cette fonctionalité peut être utilisée pour créer des catalogues de formations comme [celui-là](https://www.sspcloud.fr/formation).`,
 
