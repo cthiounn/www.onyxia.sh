@@ -197,17 +197,6 @@ export function Home() {
                         signature={t("Review slide Mercator signature")}
                     />,
                     <GlReviewSlide
-                        logoUrl={logoExpertiseFranceJpgUrl}
-                        classes={{
-                            "logo": css({
-                                "minWidth": 150
-                            })
-                        }}
-                        logoFill="white"
-                        descriptionMd={t("Review slide ExpertiseFrance description")}
-                        signature={t("Review slide ExpertiseFrance signature")}
-                    />,
-                    <GlReviewSlide
                         logoUrl={logoGenesPngUrl}
                         classes={{
                             "logo": css({
@@ -218,6 +207,17 @@ export function Home() {
                         logoFill="white"
                         descriptionMd={t("Review slide Genes description")}
                         signature={t("Review slide Genes signature")}
+                    />,
+                    <GlReviewSlide
+                        logoUrl={logoExpertiseFranceJpgUrl}
+                        classes={{
+                            "logo": css({
+                                "minWidth": 150
+                            })
+                        }}
+                        logoFill="white"
+                        descriptionMd={t("Review slide ExpertiseFrance description")}
+                        signature={t("Review slide ExpertiseFrance signature")}
                     />
                 ]}
             />
