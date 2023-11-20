@@ -120,7 +120,13 @@ export const {
                     to provide a datalab for the data scientists of the General Directorates of Taxes and Customs of four West African countries. 
                     The tool allows these administrations to practice manipulating their data to better understand and value it.
                 `,
-                "Review slide ExpertiseFrance signature": `Expertise France, the French agency for international technical expertise`
+                "Review slide ExpertiseFrance signature": `Expertise France, the French agency for international technical expertise`,
+
+                "Review slide Genes description": `Onyxia is a major asset for [the National Schools of Economics and Statistics Group (GENES)](https://www.groupe-genes.fr) in the field of data science.  
+                    Beyond simply facilitating access to modern data processing tools, Onyxia actively promotes best practices in data processing and programming, encouraging reproducibility of results.  
+                    For students, Onyxia is a unique self-training opportunity. With its intuitive interface, students can explore, experiment, and deepen their skills in real-time, while adapting to current professional world standards.
+                `,
+                "Review slide Genes signature": `National Schools of Economics and Statistics Group (GENES)`
 
             },
             "FourOhFour": {
@@ -236,7 +242,15 @@ export const {
                 pour proposer un datalab aux datascientists des Directions Générales des  Impôts et des Douanes de quatre pays de l'Afrique de l'ouest. 
                 L’outil  permet à ces administrations de s’exercer à la manipulation de leurs  données pour mieux les comprendre et les valoriser.
                 `,
-                "Review slide ExpertiseFrance signature": `Expertise France, l'agence française d'expertise technique internationale`
+                "Review slide ExpertiseFrance signature": `Expertise France, l'agence française d'expertise technique internationale`,
+
+                "Review slide Genes description": `Onyxia est un atout majeur pour [le Groupe des Écoles Nationales d'Économie et Statistique (GENES)](https://www.groupe-genes.fr) en matière de data science.  
+                  Au-delà de la simple facilitation d'accès aux outils de traitement de données modernes, Onyxia promeut activement les bonnes pratiques en 
+                  matière de traitement des données et de programmation, en favorisant la reproductibilité des résultats.  
+                  Pour les élèves, Onyxia est une opportunité unique d'autoformation. Grâce à son interface intuitive, les étudiants peuvent explorer, expérimenter et 
+                  approfondir leurs compétences en temps réel, tout en s'adaptant aux standards actuels du monde professionnel.
+                `,
+                "Review slide Genes signature": `Groupe des Écoles Nationales d'Économie et Statistique (GENES)`
 
             },
             "FourOhFour": {

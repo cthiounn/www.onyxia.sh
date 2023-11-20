@@ -14,7 +14,8 @@ import onyxiaUXLightFRUrl from "ui/assets/img/OnyxiaUXLightFR.png";
 import logoInseePngUrl from "ui/assets/img/Logo_Insee.png";
 import logoMercatorJpgUrl from "ui/assets/img/Logo_Mercator.jpg";
 import logoStatisticNorwayPngUrl from "ui/assets/img/Logo_StatisticNorway.png";
-import logoExpertiseFrance from "ui/assets/img/Logo_ExpertiseFrance.jpg";
+import logoExpertiseFranceJpgUrl from "ui/assets/img/Logo_ExpertiseFrance.jpg";
+import logoGenesPngUrl from "ui/assets/img/Logo_Genes.png";
 import { declareComponentKeys } from "i18nifty";
 import catalogMp4Url from "ui/assets/video/catalog.mp4";
 import catalogWebmUrl from "ui/assets/video/catalog.webm";
@@ -196,7 +197,7 @@ export function Home() {
                         signature={t("Review slide Mercator signature")}
                     />,
                     <GlReviewSlide
-                        logoUrl={logoExpertiseFrance}
+                        logoUrl={logoExpertiseFranceJpgUrl}
                         classes={{
                             "logo": css({
                                 "minWidth": 150
@@ -205,6 +206,18 @@ export function Home() {
                         logoFill="white"
                         descriptionMd={t("Review slide ExpertiseFrance description")}
                         signature={t("Review slide ExpertiseFrance signature")}
+                    />,
+                    <GlReviewSlide
+                        logoUrl={logoGenesPngUrl}
+                        classes={{
+                            "logo": css({
+                                "minWidth": 150,
+                                "backgroundColor": "white"
+                            })
+                        }}
+                        logoFill="white"
+                        descriptionMd={t("Review slide Genes description")}
+                        signature={t("Review slide Genes signature")}
                     />
                 ]}
             />
@@ -363,4 +376,6 @@ export const { i18n } = declareComponentKeys<
     | "Review slide Statistic Norway signature"
     | "Review slide ExpertiseFrance description"
     | "Review slide ExpertiseFrance signature"
+    | "Review slide Genes description"
+    | "Review slide Genes signature"
 >()({ Home });
