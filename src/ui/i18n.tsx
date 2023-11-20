@@ -116,7 +116,11 @@ export const {
                 
                 "Review slide Statistic Norway signature": "Statistics Norway, the national statistical institute of Norway",
 
-
+                "Review slide ExpertiseFrance description": `The datafid project, implemented by [Expertise France, deployed Onyxia](https://www.expertisefrance.fr/en/fiche-projet?id=850376) 
+                    to provide a datalab for the data scientists of the General Directorates of Taxes and Customs of four West African countries. 
+                    The tool allows these administrations to practice manipulating their data to better understand and value it.
+                `,
+                "Review slide ExpertiseFrance signature": `Expertise France, the French agency for international technical expertise`
 
             },
             "FourOhFour": {
@@ -228,7 +232,11 @@ export const {
                 
                 "Review slide Statistic Norway signature": "Statistics Norway, l'institut national de statistique de Norvège",
 
-
+                "Review slide ExpertiseFrance description": `Le  projet datafid, mis en œuvre par [Expertise France, a déployé Onyxia](https://www.expertisefrance.fr/en/fiche-projet?id=850376)  
+                pour proposer un datalab aux datascientists des Directions Générales des  Impôts et des Douanes de quatre pays de l'Afrique de l'ouest. 
+                L’outil  permet à ces administrations de s’exercer à la manipulation de leurs  données pour mieux les comprendre et les valoriser.
+                `,
+                "Review slide ExpertiseFrance signature": `Expertise France, l'agence française d'expertise technique internationale`
 
             },
             "FourOhFour": {

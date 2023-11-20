@@ -14,6 +14,7 @@ import onyxiaUXLightFRUrl from "ui/assets/img/OnyxiaUXLightFR.png";
 import logoInseePngUrl from "ui/assets/img/Logo_Insee.png";
 import logoMercatorJpgUrl from "ui/assets/img/Logo_Mercator.jpg";
 import logoStatisticNorwayPngUrl from "ui/assets/img/Logo_StatisticNorway.png";
+import logoExpertiseFrance from "ui/assets/img/Logo_ExpertiseFrance.jpg";
 import { declareComponentKeys } from "i18nifty";
 import catalogMp4Url from "ui/assets/video/catalog.mp4";
 import catalogWebmUrl from "ui/assets/video/catalog.webm";
@@ -193,6 +194,17 @@ export function Home() {
                         logoFill="white"
                         descriptionMd={t("Review slide Mercator description")}
                         signature={t("Review slide Mercator signature")}
+                    />,
+                    <GlReviewSlide
+                        logoUrl={logoExpertiseFrance}
+                        classes={{
+                            "logo": css({
+                                "minWidth": 150
+                            })
+                        }}
+                        logoFill="white"
+                        descriptionMd={t("Review slide ExpertiseFrance description")}
+                        signature={t("Review slide ExpertiseFrance signature")}
                     />
                 ]}
             />
@@ -349,4 +361,6 @@ export const { i18n } = declareComponentKeys<
     | "Review slide Mercator signature"
     | "Review slide Statistic Norway description"
     | "Review slide Statistic Norway signature"
+    | "Review slide ExpertiseFrance description"
+    | "Review slide ExpertiseFrance signature"
 >()({ Home });
