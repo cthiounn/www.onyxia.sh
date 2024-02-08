@@ -99,13 +99,11 @@ export const App = memo(() => {
                                 "label": t("contact"),
                                 "href": "https://join.slack.com/t/3innovation/shared_invite/zt-1hnzukjcn-6biCSmVy4qvyDGwbNI~sWg",
                             },
-                            /*
                             {
                                 "label": t("pricing"),
                                 "onClick": () => evtOpenPricingDialog.post(),
                                 "href": "#",
                             },
-                            */
                             {
                                 "label": t("our instance"),
                                 "href": "https://datalab.sspcloud.fr/catalog",

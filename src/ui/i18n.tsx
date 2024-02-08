@@ -34,7 +34,7 @@ export const {
                         This software is the result of a collaboration between the <MuiLink href={inseeUrl}>INSEE</MuiLink> and <MuiLink href={etalabUrl}>Etalab</MuiLink>
                     </>
                 ),
-                "pricing": "FLOSS",
+                "pricing": "Pricing",
                 "our instance": "Our instance",
                 "ok": "Ok",
                 "edit this website": "Edit this website",
@@ -102,7 +102,7 @@ export const {
                 environments on demand.  
                 I am extremely proud that [INSEE](https://www.insee.fr/en) initiated the development of this software and continues 
                 to be a major contributor, but also excited that a community is coming together to collectively enrich its features.`,
-                "Review slide insee signature": "Jean-Séverin Lair, CIO of INSEE",
+                "Review slide insee signature": "Jean-Séverin Lair,  of INSEE",
 
                 "Review slide Mercator description": `[Mercator Ocean International](https://www.mercator-ocean.eu/) is a non-profit organisation providing ocean science-based 
                 services of general interest focused on the conservation and the sustainable use of the ocean and marine resources. Onyxia datalab 
@@ -146,7 +146,7 @@ export const {
                         Ce logiciel est issu d'une collaboration entre l'<MuiLink href={inseeUrl}>INSEE</MuiLink> et <MuiLink href={etalabUrl}>Etalab</MuiLink>
                     </>
                 ),
-                "pricing": "FLOSS",
+                "pricing": "Tarification",
                 "our instance": "Notre instance",
                 "ok": "D'accord",
                 "edit this website": "Modifier ce site",
