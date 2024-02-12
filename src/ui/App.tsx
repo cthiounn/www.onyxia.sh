@@ -148,7 +148,7 @@ export const { i18n } = declareComponentKeys<
     | "documentation"
     | "contact"
     | "pricing"
-    | { K: "it is libre software dialog body"; P: { licenseUrl: string, inseeUrl: string; etalabUrl: string; }; R: JSX.Element }
+    | { K: "it is libre software dialog body"; P: { licenseUrl: string, inseeUrl: string; }; R: JSX.Element }
     | "it is libre software dialog title"
     | "our instance"
     | "ok"
@@ -220,7 +220,6 @@ const { PricingDialog } = (() => {
                     "licenseUrl":
                         "https://github.com/InseeFrLab/onyxia-web/blob/main/LICENSE",
                     "inseeUrl": `https://www.insee.fr/${lang}`,
-                    "etalabUrl": "https://www.etalab.gouv.fr/"
                 })}
                 buttons={<Button onClick={onClose}>{t("ok")}</Button>}
                 onClose={onClose}
