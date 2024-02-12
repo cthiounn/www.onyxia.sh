@@ -29,8 +29,8 @@ export const {
                 "it is libre software dialog title": "It's libre software",
                 "it is libre software dialog body": ({ licenseUrl, inseeUrl }) => (
                     <>
-                        Onyxia is a free and open-source software <MuiLink href={licenseUrl}>licensed under the MIT License</MuiLink>.<br/>
-                        It is developed by <MuiLink href={inseeUrl}>INSEE</MuiLink> along with other contributors for use in European public services.  
+                        Onyxia is a free and open-source software <MuiLink href={licenseUrl}>under MIT</MuiLink>.<br/>
+                        It is developed by <MuiLink href={inseeUrl}>INSEE</MuiLink> along with other contributors for use in European public services.<br/>
                         You are free to use, modify, or redistribute it. Contributions are also welcome!
                     </>
                 ),
@@ -142,7 +142,7 @@ export const {
                 "it is libre software dialog body": ({ licenseUrl, inseeUrl }) => (
                     <>
                         Onyxia est un logiciel libre et open source <MuiLink href={licenseUrl}>sous licence MIT</MuiLink>.<br/>
-                        Il est développé par l'<MuiLink href={inseeUrl}>INSEE</MuiLink> ainsi que par d'autres contributeurs pour une utilisation dans les services publics européens.  
+                        Il est développé par l'<MuiLink href={inseeUrl}>INSEE</MuiLink> ainsi que par d'autres contributeurs pour une utilisation dans les services publics européens.<br/>
                         Vous êtes libre de l'utiliser, de le modifier ou même de le redistribuer. Les contributions sont également les bienvenues !
                     </>
                 ),
