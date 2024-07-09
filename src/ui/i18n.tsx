@@ -173,7 +173,7 @@ export const {
                 Onyxia vous permet également de préciser des valeurs à préremplir spécifiquement
                 pour l'utilisateur en question.
                 Ce mécanisme permet notamment à l'utilisateur d'être déjà authentifié à S3 et d'avoir accès
-                à son bucket personel dès l'ouverture de Jupyter ou RStudio.`,
+                à son bucket personnel dès l'ouverture de Jupyter ou RStudio.`,
 
                 "article 3 title": `Un système d'authentification versatile`,
                 "article 3 body": `Onyxia s'intègre avec Keycloak via OpenID Connect. Restreignez 
@@ -203,7 +203,7 @@ export const {
                     Cette fonctionalité peut être utilisée pour créer des catalogues de formations comme [celui-là](https://www.sspcloud.fr/formation).`,
 
                 "bp title 6": "Technologiquement agnostique",
-                "bp description 6": `Avec Onyxia vous n'investissez pas sur une stack technique en particulier sauf kubernetes et S3.
+                "bp description 6": `Avec Onyxia vous n'investissez pas sur une stack technique en particulier sauf Kubernetes et S3.
                 Onyxia permet de rendre accessible n'importe quelle technologie cloud native et ne génére 
                 donc pas de potentielle dette technique future.`,
 
